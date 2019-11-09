@@ -1,0 +1,8 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc3\AnalogDevice\PSoC35AnalogDevice.cylib\PSoC35AnalogDevice.cyprj|b3bf5c5d-3831-4f3d-b93e-fb63004148de
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|32ea6c82-66c8-4ff7-86d9-184b5a38dec2
+C:\Users\Fischer\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|cfdc1192-fa14-49bf-9272-df409e54e204
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|6d5db273-08e3-42f1-ac61-74be6f51429d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|a7d0ac7b-c49b-48e7-ac4c-6a45917dd894
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|fd8a8d06-32f5-47b1-83ef-9a447165bec6
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|0e9b3ab1-b327-498a-8726-302b8bc120aa
+C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\uarttransmittest.cydsn\uarttransmittest.cyprj|2048f3bd-9c79-4c5e-8347-57b92ad8d4e5
