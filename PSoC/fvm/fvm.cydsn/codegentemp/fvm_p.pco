@@ -1,0 +1,19 @@
+dont_use_io iocell 1 0
+dont_use_io iocell 1 1
+dont_use_io iocell 1 3
+set_location "Net_15" macrocell 3 1 0 0
+set_location "Net_21" macrocell 3 1 0 1
+set_location "Net_18" macrocell 3 1 0 2
+set_location "Net_30" macrocell 3 1 0 3
+set_location "Net_27" macrocell 3 1 1 0
+set_location "Net_24" macrocell 2 1 0 0
+set_io "HA(0)" iocell 0 0
+set_io "LC(0)" iocell 0 5
+set_io "HALL_A(0)" iocell 1 5
+set_io "HB(0)" iocell 0 2
+set_io "HC(0)" iocell 0 4
+set_io "HALL_C(0)" iocell 1 7
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_io "HALL_B(0)" iocell 1 6
+set_io "LB(0)" iocell 0 3
+set_io "LA(0)" iocell 0 1
