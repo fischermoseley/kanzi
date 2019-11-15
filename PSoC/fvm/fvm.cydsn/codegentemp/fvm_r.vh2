@@ -1,5 +1,5 @@
 -- Project:   fvm
--- Generated: 11/12/2019 23:56:27
+-- Generated: 11/14/2019 23:26:50
 -- PSoC Creator  4.2
 
 ENTITY fvm IS
@@ -12,7 +12,8 @@ ENTITY fvm IS
         LC(0)_PAD : OUT std_ulogic;
         HALL_A(0)_PAD : IN std_ulogic;
         HALL_B(0)_PAD : IN std_ulogic;
-        HALL_C(0)_PAD : IN std_ulogic);
+        HALL_C(0)_PAD : IN std_ulogic;
+        Pin_1(0)_PAD : OUT std_ulogic);
     ATTRIBUTE voltage_VDDABUF OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VDDA OF __DEFAULT__ : ENTITY IS 5e0;
     ATTRIBUTE voltage_VUSB OF __DEFAULT__ : ENTITY IS 5e0;
@@ -46,22 +47,23 @@ ARCHITECTURE __DEFAULT__ OF fvm IS
     SIGNAL LB(0)__PA : bit;
     SIGNAL LC(0)__PA : bit;
     SIGNAL Net_15 : bit;
-    ATTRIBUTE placement_force OF Net_15 : SIGNAL IS "U(3,1,A)0";
+    ATTRIBUTE placement_force OF Net_15 : SIGNAL IS "U(3,1,B)0";
     SIGNAL Net_161 : bit;
     SIGNAL Net_162 : bit;
     SIGNAL Net_163 : bit;
     SIGNAL Net_18 : bit;
     ATTRIBUTE placement_force OF Net_18 : SIGNAL IS "U(3,1,A)2";
     SIGNAL Net_21 : bit;
-    ATTRIBUTE placement_force OF Net_21 : SIGNAL IS "U(3,1,A)1";
+    ATTRIBUTE placement_force OF Net_21 : SIGNAL IS "U(2,1,A)0";
     SIGNAL Net_24 : bit;
-    ATTRIBUTE placement_force OF Net_24 : SIGNAL IS "U(2,1,A)0";
+    ATTRIBUTE placement_force OF Net_24 : SIGNAL IS "U(3,1,A)1";
     SIGNAL Net_27 : bit;
-    ATTRIBUTE placement_force OF Net_27 : SIGNAL IS "U(3,1,B)0";
+    ATTRIBUTE placement_force OF Net_27 : SIGNAL IS "U(3,1,A)3";
     SIGNAL Net_30 : bit;
-    ATTRIBUTE placement_force OF Net_30 : SIGNAL IS "U(3,1,A)3";
+    ATTRIBUTE placement_force OF Net_30 : SIGNAL IS "U(3,1,A)0";
     SIGNAL Net_84 : bit;
     ATTRIBUTE POWER OF Net_84 : SIGNAL IS true;
+    SIGNAL Pin_1(0)__PA : bit;
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
@@ -70,31 +72,33 @@ ARCHITECTURE __DEFAULT__ OF fvm IS
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF HA(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF HA(0) : LABEL IS "P0[0]";
+    ATTRIBUTE Location OF HA(0) : LABEL IS "P0[1]";
     ATTRIBUTE lib_model OF HB(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF HB(0) : LABEL IS "P0[2]";
+    ATTRIBUTE Location OF HB(0) : LABEL IS "P0[3]";
     ATTRIBUTE lib_model OF HC(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF HC(0) : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF HC(0) : LABEL IS "P0[5]";
     ATTRIBUTE lib_model OF LA(0) : LABEL IS "iocell4";
-    ATTRIBUTE Location OF LA(0) : LABEL IS "P0[1]";
+    ATTRIBUTE Location OF LA(0) : LABEL IS "P0[2]";
     ATTRIBUTE lib_model OF LB(0) : LABEL IS "iocell5";
-    ATTRIBUTE Location OF LB(0) : LABEL IS "P0[3]";
+    ATTRIBUTE Location OF LB(0) : LABEL IS "P0[4]";
     ATTRIBUTE lib_model OF LC(0) : LABEL IS "iocell6";
-    ATTRIBUTE Location OF LC(0) : LABEL IS "P0[5]";
+    ATTRIBUTE Location OF LC(0) : LABEL IS "P0[6]";
     ATTRIBUTE lib_model OF HALL_A(0) : LABEL IS "iocell7";
     ATTRIBUTE Location OF HALL_A(0) : LABEL IS "P1[5]";
     ATTRIBUTE lib_model OF HALL_B(0) : LABEL IS "iocell8";
     ATTRIBUTE Location OF HALL_B(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF HALL_C(0) : LABEL IS "iocell9";
     ATTRIBUTE Location OF HALL_C(0) : LABEL IS "P1[7]";
+    ATTRIBUTE lib_model OF Pin_1(0) : LABEL IS "iocell10";
+    ATTRIBUTE Location OF Pin_1(0) : LABEL IS "P2[1]";
     ATTRIBUTE lib_model OF Net_21 : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF Net_21 : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF Net_21 : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF Net_18 : LABEL IS "macrocell2";
     ATTRIBUTE Location OF Net_18 : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF Net_15 : LABEL IS "macrocell3";
     ATTRIBUTE Location OF Net_15 : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF Net_24 : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF Net_24 : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF Net_24 : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF Net_27 : LABEL IS "macrocell5";
     ATTRIBUTE Location OF Net_27 : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF Net_30 : LABEL IS "macrocell6";
@@ -1090,6 +1094,98 @@ BEGIN
             oe => open,
             fb => Net_163,
             pad_in => HALL_C(0)_PAD,
+            in_clock => open,
+            in_clock_en => '1',
+            in_reset => '0',
+            out_clock => open,
+            out_clock_en => '1',
+            out_reset => '0');
+
+    Pin_1:logicalport
+        GENERIC MAP(
+            drive_mode => "110",
+            ibuf_enabled => "1",
+            id => "6cbbd842-68d9-40b1-a0d8-d8ee416c2d7d",
+            init_dr_st => "0",
+            input_buffer_sel => "00",
+            input_clk_en => 0,
+            input_sync => "1",
+            input_sync_mode => "0",
+            intr_mode => "00",
+            invert_in_clock => 0,
+            invert_in_clock_en => 0,
+            invert_in_reset => 0,
+            invert_out_clock => 0,
+            invert_out_clock_en => 0,
+            invert_out_reset => 0,
+            io_voltage => "",
+            layout_mode => "CONTIGUOUS",
+            oe_conn => "0",
+            oe_reset => 0,
+            oe_sync => "0",
+            output_clk_en => 0,
+            output_clock_mode => "0",
+            output_conn => "1",
+            output_mode => "0",
+            output_reset => 0,
+            output_sync => "0",
+            ovt_hyst_trim => "0",
+            ovt_needed => "0",
+            ovt_slew_control => "00",
+            pa_in_clock => -1,
+            pa_in_clock_en => -1,
+            pa_in_reset => -1,
+            pa_out_clock => -1,
+            pa_out_clock_en => -1,
+            pa_out_reset => -1,
+            pin_aliases => "",
+            pin_mode => "O",
+            por_state => 4,
+            port_alias_group => "",
+            port_alias_required => 0,
+            sio_group_cnt => 0,
+            sio_hifreq => "00000000",
+            sio_hyst => "1",
+            sio_ibuf => "00000000",
+            sio_info => "00",
+            sio_obuf => "00000000",
+            sio_refsel => "00000000",
+            sio_vohsel => "00000000",
+            sio_vtrip => "00000000",
+            slew_rate => "0",
+            spanning => 0,
+            sw_only => 0,
+            use_annotation => "0",
+            vtrip => "10",
+            width => 1,
+            in_clk_inv => 0,
+            in_clken_inv => 0,
+            in_clken_mode => 1,
+            in_rst_inv => 0,
+            out_clk_inv => 0,
+            out_clken_inv => 0,
+            out_clken_mode => 1,
+            out_rst_inv => 0)
+        PORT MAP(
+            in_clock_en => open,
+            in_reset => open,
+            out_clock_en => open,
+            out_reset => open);
+
+    Pin_1(0):iocell
+        GENERIC MAP(
+            in_sync_mode => 0,
+            out_sync_mode => 0,
+            oe_sync_mode => 0,
+            logicalport => "Pin_1",
+            logicalport_pin_id => 0,
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
+        PORT MAP(
+            pa_out => Pin_1(0)__PA,
+            oe => open,
+            pin_input => Net_161,
+            pad_out => Pin_1(0)_PAD,
+            pad_in => Pin_1(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
             in_reset => '0',

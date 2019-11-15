@@ -45,6 +45,9 @@
   <file name="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\codegentemp\HALL_C_aliases.h" value="HEADER;;;;;HALL_C" />
   <file name="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\codegentemp\HALL_C.c" value="SOURCE_C;CortexM3;;;;HALL_C" />
   <file name="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\codegentemp\HALL_C.h" value="HEADER;;;;;HALL_C" />
+  <file name="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\codegentemp\Pin_1_aliases.h" value="HEADER;;;;;Pin_1" />
+  <file name="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\codegentemp\Pin_1.c" value="SOURCE_C;CortexM3;;;;Pin_1" />
+  <file name="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\codegentemp\Pin_1.h" value="HEADER;;;;;Pin_1" />
   <file name="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\codegentemp\cy_em_eeprom.h" value="HEADER;;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />

@@ -37,6 +37,8 @@
 #include "HALL_B.h"
 #include "HALL_C_aliases.h"
 #include "HALL_C.h"
+#include "Pin_1_aliases.h"
+#include "Pin_1.h"
 #include "cy_em_eeprom.h"
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"

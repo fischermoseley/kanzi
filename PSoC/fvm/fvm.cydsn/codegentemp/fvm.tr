@@ -64,18 +64,19 @@ Port Name  Clock to Out  Clock Name:Phase
 
 Port Name (Source)  Port Name (Destination)  Delay  
 ------------------  -----------------------  -----  
-HALL_C(0)_PAD       HA(0)_PAD                41037  
-HALL_A(0)_PAD       HA(0)_PAD                40251  
-HALL_C(0)_PAD       HB(0)_PAD                41310  
-HALL_B(0)_PAD       HB(0)_PAD                41132  
-HALL_B(0)_PAD       HC(0)_PAD                40690  
-HALL_A(0)_PAD       HC(0)_PAD                40078  
-HALL_C(0)_PAD       LA(0)_PAD                41076  
-HALL_A(0)_PAD       LA(0)_PAD                40313  
-HALL_C(0)_PAD       LB(0)_PAD                41034  
-HALL_B(0)_PAD       LB(0)_PAD                40883  
-HALL_B(0)_PAD       LC(0)_PAD                40660  
-HALL_A(0)_PAD       LC(0)_PAD                40048  
+HALL_A(0)_PAD       HA(0)_PAD                41816  
+HALL_C(0)_PAD       HA(0)_PAD                40772  
+HALL_B(0)_PAD       HB(0)_PAD                41800  
+HALL_C(0)_PAD       HB(0)_PAD                40707  
+HALL_B(0)_PAD       HC(0)_PAD                40477  
+HALL_A(0)_PAD       HC(0)_PAD                40428  
+HALL_A(0)_PAD       LA(0)_PAD                41341  
+HALL_C(0)_PAD       LA(0)_PAD                40193  
+HALL_B(0)_PAD       LB(0)_PAD                40933  
+HALL_C(0)_PAD       LB(0)_PAD                39840  
+HALL_A(0)_PAD       LC(0)_PAD                40947  
+HALL_B(0)_PAD       LC(0)_PAD                40869  
+HALL_A(0)_PAD       Pin_1(0)_PAD             29010  
 
  =====================================================================
                     End of Datasheet Report
