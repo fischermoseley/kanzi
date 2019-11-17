@@ -64,19 +64,48 @@ Port Name  Clock to Out  Clock Name:Phase
 
 Port Name (Source)  Port Name (Destination)  Delay  
 ------------------  -----------------------  -----  
-HALL_A(0)_PAD       HA(0)_PAD                41816  
-HALL_C(0)_PAD       HA(0)_PAD                40772  
-HALL_B(0)_PAD       HB(0)_PAD                41800  
-HALL_C(0)_PAD       HB(0)_PAD                40707  
-HALL_B(0)_PAD       HC(0)_PAD                40477  
-HALL_A(0)_PAD       HC(0)_PAD                40428  
-HALL_A(0)_PAD       LA(0)_PAD                41341  
-HALL_C(0)_PAD       LA(0)_PAD                40193  
-HALL_B(0)_PAD       LB(0)_PAD                40933  
-HALL_C(0)_PAD       LB(0)_PAD                39840  
-HALL_A(0)_PAD       LC(0)_PAD                40947  
-HALL_B(0)_PAD       LC(0)_PAD                40869  
-HALL_A(0)_PAD       Pin_1(0)_PAD             29010  
+PWM1(0)_PAD         HA1(0)_PAD               42102  
+HALL_A1(0)_PAD      HA1(0)_PAD               41914  
+HALL_C1(0)_PAD      HA1(0)_PAD               41790  
+REVERSE1(0)_PAD     HA1(0)_PAD               39960  
+HALL_C2(0)_PAD      HA2(0)_PAD               40799  
+HALL_A2(0)_PAD      HA2(0)_PAD               39635  
+REVERSE2(0)_PAD     HA2(0)_PAD               39508  
+PWM2(0)_PAD         HA2(0)_PAD               38353  
+HALL_B1(0)_PAD      HB1(0)_PAD               43376  
+PWM1(0)_PAD         HB1(0)_PAD               42064  
+HALL_C1(0)_PAD      HB1(0)_PAD               41755  
+REVERSE1(0)_PAD     HB1(0)_PAD               39960  
+HALL_C2(0)_PAD      HB2(0)_PAD               40090  
+REVERSE2(0)_PAD     HB2(0)_PAD               38823  
+HALL_B2(0)_PAD      HB2(0)_PAD               38323  
+PWM2(0)_PAD         HB2(0)_PAD               38097  
+HALL_B1(0)_PAD      HC1(0)_PAD               41706  
+PWM1(0)_PAD         HC1(0)_PAD               41286  
+HALL_A1(0)_PAD      HC1(0)_PAD               41212  
+REVERSE1(0)_PAD     HC1(0)_PAD               39301  
+REVERSE2(0)_PAD     HC2(0)_PAD               41488  
+HALL_A2(0)_PAD      HC2(0)_PAD               41399  
+HALL_B2(0)_PAD      HC2(0)_PAD               40266  
+PWM2(0)_PAD         HC2(0)_PAD               39463  
+HALL_A1(0)_PAD      LA1(0)_PAD               42843  
+REVERSE1(0)_PAD     LA1(0)_PAD               41119  
+HALL_C1(0)_PAD      LA1(0)_PAD               40765  
+HALL_A2(0)_PAD      LA2(0)_PAD               41477  
+REVERSE2(0)_PAD     LA2(0)_PAD               41166  
+HALL_C2(0)_PAD      LA2(0)_PAD               38700  
+REVERSE1(0)_PAD     LB1(0)_PAD               40562  
+HALL_B1(0)_PAD      LB1(0)_PAD               40295  
+HALL_C1(0)_PAD      LB1(0)_PAD               40181  
+HALL_C2(0)_PAD      LB2(0)_PAD               43097  
+REVERSE2(0)_PAD     LB2(0)_PAD               41817  
+HALL_B2(0)_PAD      LB2(0)_PAD               40090  
+HALL_B1(0)_PAD      LC1(0)_PAD               42608  
+HALL_A1(0)_PAD      LC1(0)_PAD               41694  
+REVERSE1(0)_PAD     LC1(0)_PAD               39747  
+HALL_A2(0)_PAD      LC2(0)_PAD               42485  
+REVERSE2(0)_PAD     LC2(0)_PAD               41608  
+HALL_B2(0)_PAD      LC2(0)_PAD               40374  
 
  =====================================================================
                     End of Datasheet Report

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
+  <block name="DRIVE2_LA" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE2_HB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE2_HA" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="HALL2_B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="HALL2_C" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE2_LB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Em_EEPROM_Dynamic" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <register name="DRIVE2_CONTROL_REG" address="0x4000657A" bitWidth="8" desc="" hidden="false" />
+  </block>
+  <block name="DRIVE2_HC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE2_LC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE1_HA" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE1_LA" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="HALL1_C" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="HALL1_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="HALL1_B" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE1_HB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+    <register name="DRIVE1_CONTROL_REG" address="0x4000657B" bitWidth="8" desc="" hidden="false" />
+  </block>
+  <block name="HALL2_A" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE1_LC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE1_LB" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="DRIVE1_HC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+</blockRegMap>

@@ -1,0 +1,800 @@
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.align	2
+  26              		.type	cy_meta_configecc, %object
+  27              		.size	cy_meta_configecc, 296
+  28              	cy_meta_configecc:
+  29 0000 05       		.byte	5
+  30 0001 52       		.byte	82
+  31 0002 00       		.byte	0
+  32 0003 40       		.byte	64
+  33 0004 04       		.byte	4
+  34 0005 09       		.byte	9
+  35 0006 01       		.byte	1
+  36 0007 40       		.byte	64
+  37 0008 03       		.byte	3
+  38 0009 0B       		.byte	11
+  39 000a 01       		.byte	1
+  40 000b 40       		.byte	64
+  41 000c 02       		.byte	2
+  42 000d 15       		.byte	21
+  43 000e 01       		.byte	1
+  44 000f 40       		.byte	64
+  45 0010 05       		.byte	5
+  46 0011 19       		.byte	25
+  47 0012 01       		.byte	1
+  48 0013 40       		.byte	64
+  49 0014 04       		.byte	4
+  50 0015 1A       		.byte	26
+  51 0016 01       		.byte	1
+  52 0017 40       		.byte	64
+  53 0018 19       		.byte	25
+  54 0019 1B       		.byte	27
+  55 001a 01       		.byte	1
+  56 001b 40       		.byte	64
+  57 001c 03       		.byte	3
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 2
+
+
+  58 001d 41       		.byte	65
+  59 001e 01       		.byte	1
+  60 001f 40       		.byte	64
+  61 0020 02       		.byte	2
+  62 0021 42       		.byte	66
+  63 0022 01       		.byte	1
+  64 0023 40       		.byte	64
+  65 0024 02       		.byte	2
+  66 0025 43       		.byte	67
+  67 0026 01       		.byte	1
+  68 0027 40       		.byte	64
+  69 0028 06       		.byte	6
+  70 0029 45       		.byte	69
+  71 002a 01       		.byte	1
+  72 002b 40       		.byte	64
+  73 002c 07       		.byte	7
+  74 002d 46       		.byte	70
+  75 002e 01       		.byte	1
+  76 002f 40       		.byte	64
+  77 0030 03       		.byte	3
+  78 0031 47       		.byte	71
+  79 0032 01       		.byte	1
+  80 0033 40       		.byte	64
+  81 0034 02       		.byte	2
+  82 0035 48       		.byte	72
+  83 0036 01       		.byte	1
+  84 0037 40       		.byte	64
+  85 0038 06       		.byte	6
+  86 0039 49       		.byte	73
+  87 003a 01       		.byte	1
+  88 003b 40       		.byte	64
+  89 003c 0B       		.byte	11
+  90 003d 4C       		.byte	76
+  91 003e 01       		.byte	1
+  92 003f 40       		.byte	64
+  93 0040 0B       		.byte	11
+  94 0041 4D       		.byte	77
+  95 0042 01       		.byte	1
+  96 0043 40       		.byte	64
+  97 0044 00       		.byte	0
+  98 0045 40       		.byte	64
+  99 0046 08       		.byte	8
+ 100 0047 50       		.byte	80
+ 101 0048 09       		.byte	9
+ 102 0049 60       		.byte	96
+ 103 004a 10       		.byte	16
+ 104 004b 13       		.byte	19
+ 105 004c 11       		.byte	17
+ 106 004d 06       		.byte	6
+ 107 004e 84       		.byte	-124
+ 108 004f 80       		.byte	-128
+ 109 0050 95       		.byte	-107
+ 110 0051 02       		.byte	2
+ 111 0052 96       		.byte	-106
+ 112 0053 10       		.byte	16
+ 113 0054 E0       		.byte	-32
+ 114 0055 08       		.byte	8
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 3
+
+
+ 115 0056 85       		.byte	-123
+ 116 0057 01       		.byte	1
+ 117 0058 8E       		.byte	-114
+ 118 0059 10       		.byte	16
+ 119 005a E4       		.byte	-28
+ 120 005b 02       		.byte	2
+ 121 005c E2       		.byte	-30
+ 122 005d 08       		.byte	8
+ 123 005e E6       		.byte	-26
+ 124 005f 01       		.byte	1
+ 125 0060 83       		.byte	-125
+ 126 0061 08       		.byte	8
+ 127 0062 95       		.byte	-107
+ 128 0063 02       		.byte	2
+ 129 0064 96       		.byte	-106
+ 130 0065 10       		.byte	16
+ 131 0066 A4       		.byte	-92
+ 132 0067 80       		.byte	-128
+ 133 0068 E0       		.byte	-32
+ 134 0069 04       		.byte	4
+ 135 006a 5B       		.byte	91
+ 136 006b 04       		.byte	4
+ 137 006c 5F       		.byte	95
+ 138 006d 01       		.byte	1
+ 139 006e DB       		.byte	-37
+ 140 006f 04       		.byte	4
+ 141 0070 DF       		.byte	-33
+ 142 0071 01       		.byte	1
+ 143 0072 68       		.byte	104
+ 144 0073 01       		.byte	1
+ 145 0074 69       		.byte	105
+ 146 0075 02       		.byte	2
+ 147 0076 6A       		.byte	106
+ 148 0077 10       		.byte	16
+ 149 0078 6B       		.byte	107
+ 150 0079 10       		.byte	16
+ 151 007a 6C       		.byte	108
+ 152 007b 04       		.byte	4
+ 153 007c 6E       		.byte	110
+ 154 007d 08       		.byte	8
+ 155 007e 6F       		.byte	111
+ 156 007f 42       		.byte	66
+ 157 0080 70       		.byte	112
+ 158 0081 80       		.byte	-128
+ 159 0082 71       		.byte	113
+ 160 0083 20       		.byte	32
+ 161 0084 77       		.byte	119
+ 162 0085 0A       		.byte	10
+ 163 0086 81       		.byte	-127
+ 164 0087 20       		.byte	32
+ 165 0088 82       		.byte	-126
+ 166 0089 04       		.byte	4
+ 167 008a 83       		.byte	-125
+ 168 008b 40       		.byte	64
+ 169 008c 87       		.byte	-121
+ 170 008d 02       		.byte	2
+ 171 008e 88       		.byte	-120
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 4
+
+
+ 172 008f 01       		.byte	1
+ 173 0090 8B       		.byte	-117
+ 174 0091 02       		.byte	2
+ 175 0092 8C       		.byte	-116
+ 176 0093 04       		.byte	4
+ 177 0094 95       		.byte	-107
+ 178 0095 02       		.byte	2
+ 179 0096 96       		.byte	-106
+ 180 0097 10       		.byte	16
+ 181 0098 9F       		.byte	-97
+ 182 0099 18       		.byte	24
+ 183 009a A4       		.byte	-92
+ 184 009b 80       		.byte	-128
+ 185 009c AB       		.byte	-85
+ 186 009d 10       		.byte	16
+ 187 009e E0       		.byte	-32
+ 188 009f 04       		.byte	4
+ 189 00a0 E4       		.byte	-28
+ 190 00a1 04       		.byte	4
+ 191 00a2 E8       		.byte	-24
+ 192 00a3 04       		.byte	4
+ 193 00a4 61       		.byte	97
+ 194 00a5 80       		.byte	-128
+ 195 00a6 66       		.byte	102
+ 196 00a7 40       		.byte	64
+ 197 00a8 D6       		.byte	-42
+ 198 00a9 C0       		.byte	-64
+ 199 00aa 9E       		.byte	-98
+ 200 00ab 40       		.byte	64
+ 201 00ac A5       		.byte	-91
+ 202 00ad 80       		.byte	-128
+ 203 00ae 9E       		.byte	-98
+ 204 00af 40       		.byte	64
+ 205 00b0 A5       		.byte	-91
+ 206 00b1 80       		.byte	-128
+ 207 00b2 50       		.byte	80
+ 208 00b3 10       		.byte	16
+ 209 00b4 56       		.byte	86
+ 210 00b5 80       		.byte	-128
+ 211 00b6 58       		.byte	88
+ 212 00b7 10       		.byte	16
+ 213 00b8 5D       		.byte	93
+ 214 00b9 82       		.byte	-126
+ 215 00ba D4       		.byte	-44
+ 216 00bb 07       		.byte	7
+ 217 00bc D6       		.byte	-42
+ 218 00bd 05       		.byte	5
+ 219 00be 84       		.byte	-124
+ 220 00bf 10       		.byte	16
+ 221 00c0 8E       		.byte	-114
+ 222 00c1 80       		.byte	-128
+ 223 00c2 94       		.byte	-108
+ 224 00c3 20       		.byte	32
+ 225 00c4 9C       		.byte	-100
+ 226 00c5 10       		.byte	16
+ 227 00c6 9D       		.byte	-99
+ 228 00c7 82       		.byte	-126
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 5
+
+
+ 229 00c8 9E       		.byte	-98
+ 230 00c9 80       		.byte	-128
+ 231 00ca E4       		.byte	-28
+ 232 00cb 08       		.byte	8
+ 233 00cc 85       		.byte	-123
+ 234 00cd 80       		.byte	-128
+ 235 00ce 94       		.byte	-108
+ 236 00cf 20       		.byte	32
+ 237 00d0 9D       		.byte	-99
+ 238 00d1 82       		.byte	-126
+ 239 00d2 9E       		.byte	-98
+ 240 00d3 40       		.byte	64
+ 241 00d4 A5       		.byte	-91
+ 242 00d5 80       		.byte	-128
+ 243 00d6 81       		.byte	-127
+ 244 00d7 80       		.byte	-128
+ 245 00d8 86       		.byte	-122
+ 246 00d9 40       		.byte	64
+ 247 00da 9E       		.byte	-98
+ 248 00db 40       		.byte	64
+ 249 00dc A5       		.byte	-91
+ 250 00dd 80       		.byte	-128
+ 251 00de E2       		.byte	-30
+ 252 00df 10       		.byte	16
+ 253 00e0 E6       		.byte	-26
+ 254 00e1 80       		.byte	-128
+ 255 00e2 52       		.byte	82
+ 256 00e3 20       		.byte	32
+ 257 00e4 5B       		.byte	91
+ 258 00e5 08       		.byte	8
+ 259 00e6 5D       		.byte	93
+ 260 00e7 08       		.byte	8
+ 261 00e8 61       		.byte	97
+ 262 00e9 20       		.byte	32
+ 263 00ea 67       		.byte	103
+ 264 00eb 40       		.byte	64
+ 265 00ec 81       		.byte	-127
+ 266 00ed 20       		.byte	32
+ 267 00ee 94       		.byte	-108
+ 268 00ef 20       		.byte	32
+ 269 00f0 9D       		.byte	-99
+ 270 00f1 02       		.byte	2
+ 271 00f2 D4       		.byte	-44
+ 272 00f3 04       		.byte	4
+ 273 00f4 D6       		.byte	-42
+ 274 00f5 03       		.byte	3
+ 275 00f6 D8       		.byte	-40
+ 276 00f7 03       		.byte	3
+ 277 00f8 80       		.byte	-128
+ 278 00f9 10       		.byte	16
+ 279 00fa 81       		.byte	-127
+ 280 00fb 08       		.byte	8
+ 281 00fc 89       		.byte	-119
+ 282 00fd 02       		.byte	2
+ 283 00fe 8B       		.byte	-117
+ 284 00ff 40       		.byte	64
+ 285 0100 8E       		.byte	-114
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 6
+
+
+ 286 0101 20       		.byte	32
+ 287 0102 94       		.byte	-108
+ 288 0103 20       		.byte	32
+ 289 0104 97       		.byte	-105
+ 290 0105 40       		.byte	64
+ 291 0106 9D       		.byte	-99
+ 292 0107 0A       		.byte	10
+ 293 0108 A6       		.byte	-90
+ 294 0109 20       		.byte	32
+ 295 010a AB       		.byte	-85
+ 296 010b 08       		.byte	8
+ 297 010c E0       		.byte	-32
+ 298 010d 0D       		.byte	13
+ 299 010e 00       		.byte	0
+ 300 010f 00       		.byte	0
+ 301 0110 3F       		.byte	63
+ 302 0111 C0       		.byte	-64
+ 303 0112 C0       		.byte	-64
+ 304 0113 00       		.byte	0
+ 305 0114 C0       		.byte	-64
+ 306 0115 00       		.byte	0
+ 307 0116 00       		.byte	0
+ 308 0117 00       		.byte	0
+ 309 0118 00       		.byte	0
+ 310 0119 FF       		.byte	-1
+ 311 011a FF       		.byte	-1
+ 312 011b 00       		.byte	0
+ 313 011c F4       		.byte	-12
+ 314 011d 00       		.byte	0
+ 315 011e 00       		.byte	0
+ 316 011f 00       		.byte	0
+ 317 0120 00       		.byte	0
+ 318 0121 1F       		.byte	31
+ 319 0122 1F       		.byte	31
+ 320 0123 00       		.byte	0
+ 321 0124 1F       		.byte	31
+ 322 0125 00       		.byte	0
+ 323 0126 00       		.byte	0
+ 324 0127 00       		.byte	0
+ 325              		.section	.cywolatch,"a",%progbits
+ 326              		.align	2
+ 327              		.type	cy_meta_wonvl, %object
+ 328              		.size	cy_meta_wonvl, 4
+ 329              	cy_meta_wonvl:
+ 330 0000 BC       		.byte	-68
+ 331 0001 90       		.byte	-112
+ 332 0002 AC       		.byte	-84
+ 333 0003 AF       		.byte	-81
+ 334              		.section	.cycustnvl,"a",%progbits
+ 335              		.align	2
+ 336              		.type	cy_meta_custnvl, %object
+ 337              		.size	cy_meta_custnvl, 4
+ 338              	cy_meta_custnvl:
+ 339 0000 00       		.byte	0
+ 340 0001 00       		.byte	0
+ 341 0002 40       		.byte	64
+ 342 0003 05       		.byte	5
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 7
+
+
+ 343              		.section	.cymeta,"a",%progbits
+ 344              		.align	2
+ 345              		.type	cy_metadata, %object
+ 346              		.size	cy_metadata, 12
+ 347              	cy_metadata:
+ 348 0000 00       		.byte	0
+ 349 0001 01       		.byte	1
+ 350 0002 2E       		.byte	46
+ 351 0003 16       		.byte	22
+ 352 0004 10       		.byte	16
+ 353 0005 69       		.byte	105
+ 354 0006 00       		.byte	0
+ 355 0007 01       		.byte	1
+ 356 0008 00       		.byte	0
+ 357 0009 00       		.byte	0
+ 358 000a 00       		.byte	0
+ 359 000b 00       		.byte	0
+ 360              		.section	.cyflashprotect,"a",%progbits
+ 361              		.align	2
+ 362              		.type	cy_meta_flashprotect, %object
+ 363              		.size	cy_meta_flashprotect, 256
+ 364              	cy_meta_flashprotect:
+ 365 0000 00000000 		.space	256
+ 365      00000000 
+ 365      00000000 
+ 365      00000000 
+ 365      00000000 
+ 366              		.text
+ 367              	.Letext0:
+ 368              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 369              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 370              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 371              		.section	.debug_info,"",%progbits
+ 372              	.Ldebug_info0:
+ 373 0000 31010000 		.4byte	0x131
+ 374 0004 0400     		.2byte	0x4
+ 375 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 376 000a 04       		.byte	0x4
+ 377 000b 01       		.uleb128 0x1
+ 378 000c 24000000 		.4byte	.LASF17
+ 379 0010 0C       		.byte	0xc
+ 380 0011 C0010000 		.4byte	.LASF18
+ 381 0015 F9000000 		.4byte	.LASF19
+ 382 0019 00000000 		.4byte	.Ldebug_line0
+ 383 001d 02       		.uleb128 0x2
+ 384 001e 01       		.byte	0x1
+ 385 001f 06       		.byte	0x6
+ 386 0020 B4010000 		.4byte	.LASF0
+ 387 0024 03       		.uleb128 0x3
+ 388 0025 00000000 		.4byte	.LASF9
+ 389 0029 01       		.byte	0x1
+ 390 002a 1D       		.byte	0x1d
+ 391 002b 2F000000 		.4byte	0x2f
+ 392 002f 02       		.uleb128 0x2
+ 393 0030 01       		.byte	0x1
+ 394 0031 08       		.byte	0x8
+ 395 0032 16000000 		.4byte	.LASF1
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 8
+
+
+ 396 0036 02       		.uleb128 0x2
+ 397 0037 02       		.byte	0x2
+ 398 0038 05       		.byte	0x5
+ 399 0039 A1010000 		.4byte	.LASF2
+ 400 003d 02       		.uleb128 0x2
+ 401 003e 02       		.byte	0x2
+ 402 003f 07       		.byte	0x7
+ 403 0040 C4000000 		.4byte	.LASF3
+ 404 0044 02       		.uleb128 0x2
+ 405 0045 04       		.byte	0x4
+ 406 0046 05       		.byte	0x5
+ 407 0047 AB010000 		.4byte	.LASF4
+ 408 004b 02       		.uleb128 0x2
+ 409 004c 04       		.byte	0x4
+ 410 004d 07       		.byte	0x7
+ 411 004e B2000000 		.4byte	.LASF5
+ 412 0052 02       		.uleb128 0x2
+ 413 0053 08       		.byte	0x8
+ 414 0054 05       		.byte	0x5
+ 415 0055 93010000 		.4byte	.LASF6
+ 416 0059 02       		.uleb128 0x2
+ 417 005a 08       		.byte	0x8
+ 418 005b 07       		.byte	0x7
+ 419 005c 48010000 		.4byte	.LASF7
+ 420 0060 04       		.uleb128 0x4
+ 421 0061 04       		.byte	0x4
+ 422 0062 05       		.byte	0x5
+ 423 0063 696E7400 		.ascii	"int\000"
+ 424 0067 02       		.uleb128 0x2
+ 425 0068 04       		.byte	0x4
+ 426 0069 07       		.byte	0x7
+ 427 006a 3B010000 		.4byte	.LASF8
+ 428 006e 03       		.uleb128 0x3
+ 429 006f 5F010000 		.4byte	.LASF10
+ 430 0073 02       		.byte	0x2
+ 431 0074 18       		.byte	0x18
+ 432 0075 24000000 		.4byte	0x24
+ 433 0079 05       		.uleb128 0x5
+ 434 007a 91000000 		.4byte	0x91
+ 435 007e 8A000000 		.4byte	0x8a
+ 436 0082 06       		.uleb128 0x6
+ 437 0083 8A000000 		.4byte	0x8a
+ 438 0087 2701     		.2byte	0x127
+ 439 0089 00       		.byte	0
+ 440 008a 02       		.uleb128 0x2
+ 441 008b 04       		.byte	0x4
+ 442 008c 07       		.byte	0x7
+ 443 008d 8A010000 		.4byte	.LASF11
+ 444 0091 07       		.uleb128 0x7
+ 445 0092 6E000000 		.4byte	0x6e
+ 446 0096 08       		.uleb128 0x8
+ 447 0097 E7000000 		.4byte	.LASF12
+ 448 009b 03       		.byte	0x3
+ 449 009c 1F       		.byte	0x1f
+ 450 009d A7000000 		.4byte	0xa7
+ 451 00a1 05       		.uleb128 0x5
+ 452 00a2 03       		.byte	0x3
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 9
+
+
+ 453 00a3 00000000 		.4byte	cy_meta_configecc
+ 454 00a7 07       		.uleb128 0x7
+ 455 00a8 79000000 		.4byte	0x79
+ 456 00ac 05       		.uleb128 0x5
+ 457 00ad 91000000 		.4byte	0x91
+ 458 00b1 BC000000 		.4byte	0xbc
+ 459 00b5 09       		.uleb128 0x9
+ 460 00b6 8A000000 		.4byte	0x8a
+ 461 00ba 03       		.byte	0x3
+ 462 00bb 00       		.byte	0
+ 463 00bc 08       		.uleb128 0x8
+ 464 00bd D7000000 		.4byte	.LASF13
+ 465 00c1 03       		.byte	0x3
+ 466 00c2 51       		.byte	0x51
+ 467 00c3 CD000000 		.4byte	0xcd
+ 468 00c7 05       		.uleb128 0x5
+ 469 00c8 03       		.byte	0x3
+ 470 00c9 00000000 		.4byte	cy_meta_custnvl
+ 471 00cd 07       		.uleb128 0x7
+ 472 00ce AC000000 		.4byte	0xac
+ 473 00d2 08       		.uleb128 0x8
+ 474 00d3 7C010000 		.4byte	.LASF14
+ 475 00d7 03       		.byte	0x3
+ 476 00d8 5F       		.byte	0x5f
+ 477 00d9 E3000000 		.4byte	0xe3
+ 478 00dd 05       		.uleb128 0x5
+ 479 00de 03       		.byte	0x3
+ 480 00df 00000000 		.4byte	cy_meta_wonvl
+ 481 00e3 07       		.uleb128 0x7
+ 482 00e4 AC000000 		.4byte	0xac
+ 483 00e8 05       		.uleb128 0x5
+ 484 00e9 91000000 		.4byte	0x91
+ 485 00ed F8000000 		.4byte	0xf8
+ 486 00f1 09       		.uleb128 0x9
+ 487 00f2 8A000000 		.4byte	0x8a
+ 488 00f6 FF       		.byte	0xff
+ 489 00f7 00       		.byte	0
+ 490 00f8 08       		.uleb128 0x8
+ 491 00f9 67010000 		.4byte	.LASF15
+ 492 00fd 03       		.byte	0x3
+ 493 00fe 6D       		.byte	0x6d
+ 494 00ff 09010000 		.4byte	0x109
+ 495 0103 05       		.uleb128 0x5
+ 496 0104 03       		.byte	0x3
+ 497 0105 00000000 		.4byte	cy_meta_flashprotect
+ 498 0109 07       		.uleb128 0x7
+ 499 010a E8000000 		.4byte	0xe8
+ 500 010e 05       		.uleb128 0x5
+ 501 010f 91000000 		.4byte	0x91
+ 502 0113 1E010000 		.4byte	0x11e
+ 503 0117 09       		.uleb128 0x9
+ 504 0118 8A000000 		.4byte	0x8a
+ 505 011c 0B       		.byte	0xb
+ 506 011d 00       		.byte	0
+ 507 011e 08       		.uleb128 0x8
+ 508 011f 0A000000 		.4byte	.LASF16
+ 509 0123 03       		.byte	0x3
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 10
+
+
+ 510 0124 9A       		.byte	0x9a
+ 511 0125 2F010000 		.4byte	0x12f
+ 512 0129 05       		.uleb128 0x5
+ 513 012a 03       		.byte	0x3
+ 514 012b 00000000 		.4byte	cy_metadata
+ 515 012f 07       		.uleb128 0x7
+ 516 0130 0E010000 		.4byte	0x10e
+ 517 0134 00       		.byte	0
+ 518              		.section	.debug_abbrev,"",%progbits
+ 519              	.Ldebug_abbrev0:
+ 520 0000 01       		.uleb128 0x1
+ 521 0001 11       		.uleb128 0x11
+ 522 0002 01       		.byte	0x1
+ 523 0003 25       		.uleb128 0x25
+ 524 0004 0E       		.uleb128 0xe
+ 525 0005 13       		.uleb128 0x13
+ 526 0006 0B       		.uleb128 0xb
+ 527 0007 03       		.uleb128 0x3
+ 528 0008 0E       		.uleb128 0xe
+ 529 0009 1B       		.uleb128 0x1b
+ 530 000a 0E       		.uleb128 0xe
+ 531 000b 10       		.uleb128 0x10
+ 532 000c 17       		.uleb128 0x17
+ 533 000d 00       		.byte	0
+ 534 000e 00       		.byte	0
+ 535 000f 02       		.uleb128 0x2
+ 536 0010 24       		.uleb128 0x24
+ 537 0011 00       		.byte	0
+ 538 0012 0B       		.uleb128 0xb
+ 539 0013 0B       		.uleb128 0xb
+ 540 0014 3E       		.uleb128 0x3e
+ 541 0015 0B       		.uleb128 0xb
+ 542 0016 03       		.uleb128 0x3
+ 543 0017 0E       		.uleb128 0xe
+ 544 0018 00       		.byte	0
+ 545 0019 00       		.byte	0
+ 546 001a 03       		.uleb128 0x3
+ 547 001b 16       		.uleb128 0x16
+ 548 001c 00       		.byte	0
+ 549 001d 03       		.uleb128 0x3
+ 550 001e 0E       		.uleb128 0xe
+ 551 001f 3A       		.uleb128 0x3a
+ 552 0020 0B       		.uleb128 0xb
+ 553 0021 3B       		.uleb128 0x3b
+ 554 0022 0B       		.uleb128 0xb
+ 555 0023 49       		.uleb128 0x49
+ 556 0024 13       		.uleb128 0x13
+ 557 0025 00       		.byte	0
+ 558 0026 00       		.byte	0
+ 559 0027 04       		.uleb128 0x4
+ 560 0028 24       		.uleb128 0x24
+ 561 0029 00       		.byte	0
+ 562 002a 0B       		.uleb128 0xb
+ 563 002b 0B       		.uleb128 0xb
+ 564 002c 3E       		.uleb128 0x3e
+ 565 002d 0B       		.uleb128 0xb
+ 566 002e 03       		.uleb128 0x3
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 11
+
+
+ 567 002f 08       		.uleb128 0x8
+ 568 0030 00       		.byte	0
+ 569 0031 00       		.byte	0
+ 570 0032 05       		.uleb128 0x5
+ 571 0033 01       		.uleb128 0x1
+ 572 0034 01       		.byte	0x1
+ 573 0035 49       		.uleb128 0x49
+ 574 0036 13       		.uleb128 0x13
+ 575 0037 01       		.uleb128 0x1
+ 576 0038 13       		.uleb128 0x13
+ 577 0039 00       		.byte	0
+ 578 003a 00       		.byte	0
+ 579 003b 06       		.uleb128 0x6
+ 580 003c 21       		.uleb128 0x21
+ 581 003d 00       		.byte	0
+ 582 003e 49       		.uleb128 0x49
+ 583 003f 13       		.uleb128 0x13
+ 584 0040 2F       		.uleb128 0x2f
+ 585 0041 05       		.uleb128 0x5
+ 586 0042 00       		.byte	0
+ 587 0043 00       		.byte	0
+ 588 0044 07       		.uleb128 0x7
+ 589 0045 26       		.uleb128 0x26
+ 590 0046 00       		.byte	0
+ 591 0047 49       		.uleb128 0x49
+ 592 0048 13       		.uleb128 0x13
+ 593 0049 00       		.byte	0
+ 594 004a 00       		.byte	0
+ 595 004b 08       		.uleb128 0x8
+ 596 004c 34       		.uleb128 0x34
+ 597 004d 00       		.byte	0
+ 598 004e 03       		.uleb128 0x3
+ 599 004f 0E       		.uleb128 0xe
+ 600 0050 3A       		.uleb128 0x3a
+ 601 0051 0B       		.uleb128 0xb
+ 602 0052 3B       		.uleb128 0x3b
+ 603 0053 0B       		.uleb128 0xb
+ 604 0054 49       		.uleb128 0x49
+ 605 0055 13       		.uleb128 0x13
+ 606 0056 3F       		.uleb128 0x3f
+ 607 0057 19       		.uleb128 0x19
+ 608 0058 02       		.uleb128 0x2
+ 609 0059 18       		.uleb128 0x18
+ 610 005a 00       		.byte	0
+ 611 005b 00       		.byte	0
+ 612 005c 09       		.uleb128 0x9
+ 613 005d 21       		.uleb128 0x21
+ 614 005e 00       		.byte	0
+ 615 005f 49       		.uleb128 0x49
+ 616 0060 13       		.uleb128 0x13
+ 617 0061 2F       		.uleb128 0x2f
+ 618 0062 0B       		.uleb128 0xb
+ 619 0063 00       		.byte	0
+ 620 0064 00       		.byte	0
+ 621 0065 00       		.byte	0
+ 622              		.section	.debug_aranges,"",%progbits
+ 623 0000 14000000 		.4byte	0x14
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 12
+
+
+ 624 0004 0200     		.2byte	0x2
+ 625 0006 00000000 		.4byte	.Ldebug_info0
+ 626 000a 04       		.byte	0x4
+ 627 000b 00       		.byte	0
+ 628 000c 0000     		.2byte	0
+ 629 000e 0000     		.2byte	0
+ 630 0010 00000000 		.4byte	0
+ 631 0014 00000000 		.4byte	0
+ 632              		.section	.debug_line,"",%progbits
+ 633              	.Ldebug_line0:
+ 634 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 634      02003701 
+ 634      00000201 
+ 634      FB0E0D00 
+ 634      01010101 
+ 635              	.LASF9:
+ 636 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 636      6E74385F 
+ 636      7400
+ 637              	.LASF16:
+ 638 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 638      65746164 
+ 638      61746100 
+ 639              	.LASF1:
+ 640 0016 756E7369 		.ascii	"unsigned char\000"
+ 640      676E6564 
+ 640      20636861 
+ 640      7200
+ 641              	.LASF17:
+ 642 0024 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 642      43313120 
+ 642      352E342E 
+ 642      31203230 
+ 642      31363036 
+ 643 0057 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 643      20726576 
+ 643      6973696F 
+ 643      6E203233 
+ 643      37373135 
+ 644 008a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 644      66756E63 
+ 644      74696F6E 
+ 644      2D736563 
+ 644      74696F6E 
+ 645              	.LASF5:
+ 646 00b2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 646      20756E73 
+ 646      69676E65 
+ 646      6420696E 
+ 646      7400
+ 647              	.LASF3:
+ 648 00c4 73686F72 		.ascii	"short unsigned int\000"
+ 648      7420756E 
+ 648      7369676E 
+ 648      65642069 
+ 648      6E7400
+ 649              	.LASF13:
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 13
+
+
+ 650 00d7 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 650      6574615F 
+ 650      63757374 
+ 650      6E766C00 
+ 651              	.LASF12:
+ 652 00e7 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 652      6574615F 
+ 652      636F6E66 
+ 652      69676563 
+ 652      6300
+ 653              	.LASF19:
+ 654 00f9 433A5C55 		.ascii	"C:\\Users\\Fischer\\Documents\\GitHub\\kanzi\\PSoC\\"
+ 654      73657273 
+ 654      5C466973 
+ 654      63686572 
+ 654      5C446F63 
+ 655 0126 66766D5F 		.ascii	"fvm_self_start.cydsn\000"
+ 655      73656C66 
+ 655      5F737461 
+ 655      72742E63 
+ 655      7964736E 
+ 656              	.LASF8:
+ 657 013b 756E7369 		.ascii	"unsigned int\000"
+ 657      676E6564 
+ 657      20696E74 
+ 657      00
+ 658              	.LASF7:
+ 659 0148 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 659      206C6F6E 
+ 659      6720756E 
+ 659      7369676E 
+ 659      65642069 
+ 660              	.LASF10:
+ 661 015f 75696E74 		.ascii	"uint8_t\000"
+ 661      385F7400 
+ 662              	.LASF15:
+ 663 0167 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 663      6574615F 
+ 663      666C6173 
+ 663      6870726F 
+ 663      74656374 
+ 664              	.LASF14:
+ 665 017c 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 665      6574615F 
+ 665      776F6E76 
+ 665      6C00
+ 666              	.LASF11:
+ 667 018a 73697A65 		.ascii	"sizetype\000"
+ 667      74797065 
+ 667      00
+ 668              	.LASF6:
+ 669 0193 6C6F6E67 		.ascii	"long long int\000"
+ 669      206C6F6E 
+ 669      6720696E 
+ 669      7400
+ 670              	.LASF2:
+ 671 01a1 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\cczLsFDu.s 			page 14
+
+
+ 671      7420696E 
+ 671      7400
+ 672              	.LASF4:
+ 673 01ab 6C6F6E67 		.ascii	"long int\000"
+ 673      20696E74 
+ 673      00
+ 674              	.LASF0:
+ 675 01b4 7369676E 		.ascii	"signed char\000"
+ 675      65642063 
+ 675      68617200 
+ 676              	.LASF18:
+ 677 01c0 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 677      72617465 
+ 677      645F536F 
+ 677      75726365 
+ 677      5C50536F 
+ 678              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

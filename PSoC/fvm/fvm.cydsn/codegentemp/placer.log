@@ -6,7 +6,7 @@
 
 #Build Date:         Dec  5 2017 15:35:27
 
-#File Generated:     Nov 14 2019 23:26:49
+#File Generated:     Nov 16 2019 04:21:58
 
 #Purpose:            
 
@@ -45,7 +45,7 @@ Phase 3
 I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
 
 Design Statistics after Packing
-    Number of Combinational MCs 	:	6
+    Number of Combinational MCs 	:	12
     Number of Sequential MCs    	:	0
     Number of DPs               	:	0
     Number of Controls          	:	0
@@ -54,9 +54,9 @@ Design Statistics after Packing
     Number of count7cells       	:	0
 
 Device Utilization Summary after Packing
-    Macrocells                  :	6/192
-    UDBS                        :	2/24
-    IOs                         :	10/72
+    Macrocells                  :	12/192
+    UDBS                        :	3/24
+    IOs                         :	22/72
 
 
 D2088: Phase 3, elapsed time : 0.0 (sec)
@@ -74,18 +74,39 @@ Phase 7
 D2088: Phase 7, elapsed time : 0.0 (sec)
 
 Final Design Statistics
-    Number of Combinational MCs 	:	6
+    Number of Combinational MCs 	:	12
     Number of Sequential MCs    	:	0
     Number of DPs               	:	0
     Number of Controls          	:	0
     Number of Status            	:	0
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
-    Number of IOs       	:	10
+    Number of IOs       	:	22
 
 Device Utilization Summary
-    Macrocells                  :	6/192
-    IOs                         :	10/72
+    Macrocells                  :	12/192
+    IOs                         :	22/72
+
+
+Phase 6
+D2088: Phase 6, elapsed time : 0.0 (sec)
+
+Phase 7
+D2088: Phase 7, elapsed time : 0.0 (sec)
+
+Final Design Statistics
+    Number of Combinational MCs 	:	12
+    Number of Sequential MCs    	:	0
+    Number of DPs               	:	0
+    Number of Controls          	:	0
+    Number of Status            	:	0
+    Number of SyncCells         	:	0
+    Number of count7cells       	:	0
+    Number of IOs       	:	22
+
+Device Utilization Summary
+    Macrocells                  :	12/192
+    IOs                         :	22/72
 
 
 Phase 8
@@ -93,5 +114,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.7 sec.
+I2076: Total run-time: 1.2 sec.
 

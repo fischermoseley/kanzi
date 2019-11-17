@@ -58,33 +58,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitteriar.inc</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cyfitter.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cydisabledsheets.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HA_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HA.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HA.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HB_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HB.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HB.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HC_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HC.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HC.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LA_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LA.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LA.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LB_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LB.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LB.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LC_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LC.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LC.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_A_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_A.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_A.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_B_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_B.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_B.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_C_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_C.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_C.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cy_em_eeprom.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cy_em_eeprom.h</File>
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">Generated_Source\PSoC5\cm3gcc.ld</File>
@@ -118,9 +91,72 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareexport.ld</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cycodeshareimport.scat</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_1_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HA1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HA1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HA1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HB1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HB1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HB1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HC1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HC1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HC1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LA1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LA1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LA1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LB1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LB1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LB1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LC1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LC1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LC1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_A1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_A1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_A1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_B1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_B1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_B1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_C1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_C1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_C1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\REVERSE1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\REVERSE1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\REVERSE1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM1_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM1.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM1.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HA2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HA2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HA2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HB2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HB2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HB2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HC2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HC2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HC2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LA2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LA2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LA2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LB2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LB2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LB2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LC2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LC2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LC2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_A2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_A2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_A2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_B2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_B2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_B2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_C2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_C2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\HALL_C2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\REVERSE2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\REVERSE2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\REVERSE2.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM2_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM2.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\PWM2.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\Export\ARM_GCC_Generic">
