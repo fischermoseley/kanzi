@@ -1,7 +1,0 @@
---------------- Build Started: 11/08/2019 02:18:11 Project: CE95388, Configuration: DP8051 Keil 9.51 Debug ---------------
-The code generation step is up to date.
-c51.exe main.c NOIV LARGE MODDP2 OMF2 VB(1) NOIP "INCDIR(., Generated_Source\PSoC3)" FF(3) DB WL(2) PR(.\DP8051_Keil_951\Debug/main.lst) OT(0 ) OJ(.\DP8051_Keil_951\Debug\main.obj)
-WARNING: main.c:34: 'LCD_Char_1_Start': missing function-prototype
-ERROR: main.c:50: 'LCD_Char_1_CLEAR_DISPLAY': undefined identifier
-The command 'c51.exe' failed with exit code '2'.
---------------- Build Failed: 11/08/2019 02:18:12 ---------------

@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="fvm\fvm\TopDesign">
 <ExpandedNodeIds>
 <v>fvm</v>
 <v>fvm\fvm</v>
@@ -121,40 +121,6 @@
 <VisibleNodeIds>
 <v>fvm</v>
 <v>fvm\fvm</v>
-<v>fvm\fvm\CortexM3</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HA1.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HA2.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_A1.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_A2.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_B1.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_B2.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_C1.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_C2.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HB1.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HB2.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HC1.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\HC2.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\LA1.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\LA2.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\LB1.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\LB2.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\LC1.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\LC2.lst</v>
-<v>fvm\fvm\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -214,6 +180,7 @@
 <OpenDocs>
 <name v=".\fvm.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\fvm.cydsn\fvm.cydwr" />
+<name v=".\fvm.cydsn\main.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -221,7 +188,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="564, 471" SelectedTabbedMdiWindow="829838ea-d51d-4d45-81a2-b59169984c45"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0342a946-1eb3-434f-875b-37b9d2cd7c37" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\TopDesign\TopDesign.cysch" Guid="984af49d-d56d-4ba9-bbfa-763cdd00c098" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\fvm.cydwr" Guid="829838ea-d51d-4d45-81a2-b59169984c45" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1078, 471" SelectedTabbedMdiWindow="984af49d-d56d-4ba9-bbfa-763cdd00c098"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0342a946-1eb3-434f-875b-37b9d2cd7c37" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\TopDesign\TopDesign.cysch" Guid="984af49d-d56d-4ba9-bbfa-763cdd00c098" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\fvm.cydwr" Guid="829838ea-d51d-4d45-81a2-b59169984c45" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\fvm\fvm.cydsn\main.c" Guid="36d82864-8674-40c5-8ce5-ababe62b0537" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

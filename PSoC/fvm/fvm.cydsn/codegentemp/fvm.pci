@@ -1,5 +1,5 @@
 # fvm
-# 2019-11-16 09:21:57Z
+# 2019-11-18 21:05:41Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -16,3 +16,16 @@ set_io "LC1(0)" iocell 0 6
 set_io "HALL_A1(0)" iocell 1 5
 set_io "HALL_B1(0)" iocell 1 6
 set_io "HALL_C1(0)" iocell 1 7
+set_io "REVERSE1(0)" iocell 15 0
+set_io "PWM1(0)" iocell 3 6
+set_io "HA2(0)" iocell 3 0
+set_io "HB2(0)" iocell 3 2
+set_io "HC2(0)" iocell 3 4
+set_io "LA2(0)" iocell 3 1
+set_io "LB2(0)" iocell 3 3
+set_io "LC2(0)" iocell 3 5
+set_io "HALL_A2(0)" iocell 12 2
+set_io "HALL_B2(0)" iocell 12 3
+set_io "HALL_C2(0)" iocell 12 4
+set_io "REVERSE2(0)" iocell 15 1
+set_io "PWM2(0)" iocell 3 7

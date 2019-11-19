@@ -1,5 +1,5 @@
 -- Project:   fvm
--- Generated: 11/16/2019 04:21:57
+-- Generated: 11/18/2019 16:05:41
 -- PSoC Creator  4.2
 
 ENTITY fvm IS
@@ -119,6 +119,32 @@ ARCHITECTURE __DEFAULT__ OF fvm IS
     ATTRIBUTE Location OF HALL_B1(0) : LABEL IS "P1[6]";
     ATTRIBUTE lib_model OF HALL_C1(0) : LABEL IS "iocell9";
     ATTRIBUTE Location OF HALL_C1(0) : LABEL IS "P1[7]";
+    ATTRIBUTE lib_model OF REVERSE1(0) : LABEL IS "iocell10";
+    ATTRIBUTE Location OF REVERSE1(0) : LABEL IS "P15[0]";
+    ATTRIBUTE lib_model OF PWM1(0) : LABEL IS "iocell11";
+    ATTRIBUTE Location OF PWM1(0) : LABEL IS "P3[6]";
+    ATTRIBUTE lib_model OF HA2(0) : LABEL IS "iocell12";
+    ATTRIBUTE Location OF HA2(0) : LABEL IS "P3[0]";
+    ATTRIBUTE lib_model OF HB2(0) : LABEL IS "iocell13";
+    ATTRIBUTE Location OF HB2(0) : LABEL IS "P3[2]";
+    ATTRIBUTE lib_model OF HC2(0) : LABEL IS "iocell14";
+    ATTRIBUTE Location OF HC2(0) : LABEL IS "P3[4]";
+    ATTRIBUTE lib_model OF LA2(0) : LABEL IS "iocell15";
+    ATTRIBUTE Location OF LA2(0) : LABEL IS "P3[1]";
+    ATTRIBUTE lib_model OF LB2(0) : LABEL IS "iocell16";
+    ATTRIBUTE Location OF LB2(0) : LABEL IS "P3[3]";
+    ATTRIBUTE lib_model OF LC2(0) : LABEL IS "iocell17";
+    ATTRIBUTE Location OF LC2(0) : LABEL IS "P3[5]";
+    ATTRIBUTE lib_model OF HALL_A2(0) : LABEL IS "iocell18";
+    ATTRIBUTE Location OF HALL_A2(0) : LABEL IS "P12[2]";
+    ATTRIBUTE lib_model OF HALL_B2(0) : LABEL IS "iocell19";
+    ATTRIBUTE Location OF HALL_B2(0) : LABEL IS "P12[3]";
+    ATTRIBUTE lib_model OF HALL_C2(0) : LABEL IS "iocell20";
+    ATTRIBUTE Location OF HALL_C2(0) : LABEL IS "P12[4]";
+    ATTRIBUTE lib_model OF REVERSE2(0) : LABEL IS "iocell21";
+    ATTRIBUTE Location OF REVERSE2(0) : LABEL IS "P15[1]";
+    ATTRIBUTE lib_model OF PWM2(0) : LABEL IS "iocell22";
+    ATTRIBUTE Location OF PWM2(0) : LABEL IS "P3[7]";
     ATTRIBUTE lib_model OF Net_177 : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF Net_178 : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF Net_179 : LABEL IS "macrocell3";

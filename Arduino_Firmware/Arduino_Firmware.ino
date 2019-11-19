@@ -22,6 +22,7 @@ cool with it!
 #include <PID_v1.h>
 #include <Wire.h>
 #include "SparkFun_BNO080_Arduino_Library.h"
+#include <math.h>
 
 
 /*--------------- State Variables -----------------*/
@@ -32,6 +33,10 @@ eulerAngle gyroRate;
 struct stateVector { double left_motor; double right_motor; };
 stateVector controlVector;
 
+uint8_t stopThresholdTime = 10 //the amount of time (in ms) that has to pass where the hall effect sensors don't change to be considered "stopped"
+uint8_t lastHallState = 0;
+unsigned long lastHallChange = millis(); //variable to keep track of the last time the hall effect sensors changed, and therefore when the motors were moving
+
 /*------------- Hardware Configuration ----------- */
 //PSoC motor controller configuration
 #define MIN_MOTOR_OUTPUT -255
@@ -39,10 +44,19 @@ stateVector controlVector;
 #define FORWARD 0 //the logic level on the direction pin that makes the motor go forwards
 #define REVERSE 1 //the logic level on the direction pin that makes the motor go backwards
 
-#define LEFT_MOTOR_PWM 13
-#define LEFT_MOTOR_DIR 11
-#define RIGHT_MOTOR_PWM 12
-#define RIGHT_MOTOR_DIR 10
+//IO pins to use for interfacing with the PSoC controller
+#define LEFT_MOTOR_PWM 5
+#define RIGHT_MOTOR_PWM 6
+#define LEFT_MOTOR_DIR 7
+#define RIGHT_MOTOR_DIR 8
+
+//IO pins to use for interfacing with the hall effect sensors
+#define LEFT_HALL_A
+#define LEFT_HALL_B
+#define LEFT_HALL_C
+#define RIGHT_HALL_A
+#define RIGHT_HALL_B
+#define RIGHT_HALL_C
 
 //IMU configuration
 BNO080 IMU;
@@ -51,7 +65,7 @@ struct PIDconfigContainer {
   double yawSetpoint = 0;
   double pitchSetpoint = 0;
   double rollSetpoint = 90;
-  double K_p = 100;
+  double K_p = 10;
   double K_i = 0;
   double K_d = 0;
 } PIDconfig;
@@ -71,7 +85,7 @@ void updateRotationVector(struct eulerAngle* rotationVector){
 
     /* YAW */ 
     x = 2 * ((i * j) + (r * k)); 
-    y = square(r) - square(k) - square(j) + square(i); 
+    y = sq(r) - sq(k) - sq(j) + sq(i); 
     rotationVector->yaw = degrees(atan2(y, x));
 
     /* PITCH */ 
@@ -79,7 +93,7 @@ void updateRotationVector(struct eulerAngle* rotationVector){
 
     /* ROLL */ 
     x = 2 * ((j * k) + (i * r)); 
-    y = square(r) + square(k) - square(j) - square(i); 
+    y = sq(r) + sq(k) - sq(j) - sq(i); 
     rotationVector->roll = degrees(atan2(y , x));
   }
 }
@@ -106,12 +120,12 @@ uint8_t updateMotors(struct stateVector* controlVector){
     //update the left motor
     if(left_motor > 0) digitalWrite(LEFT_MOTOR_DIR, FORWARD);
     if(left_motor < 0) digitalWrite(LEFT_MOTOR_DIR, REVERSE);
-    analogWrite(LEFT_MOTOR_PWM, controlVector->left_motor);
+    analogWrite(LEFT_MOTOR_PWM, abs(controlVector->left_motor));
 
     //update the right motor
     if(right_motor > 0) digitalWrite(RIGHT_MOTOR_DIR, FORWARD);
     if(right_motor < 0) digitalWrite(RIGHT_MOTOR_DIR, REVERSE);
-    analogWrite(RIGHT_MOTOR_PWM, controlVector->right_motor);
+    analogWrite(RIGHT_MOTOR_PWM, abs(controlVector->right_motor));
 
     return 0;
 }
@@ -124,6 +138,33 @@ void printControlVector(struct stateVector* controlVector){
   Serial.print("  right_motor: ");
   Serial.print(controlVector->right_motor);
   Serial.println();
+}
+
+bool isMotorStopped() {
+  //get the current state of the hall effect array
+  uint8_t currentState = 0x00;
+  bitWrite(currentState, 2, digitalRead(LEFT_HALL_A));
+  bitWrite(currentState, 1, digitalRead(LEFT_HALL_B));
+  bitWrite(currentState, 0, digitalRead(LEFT_HALL_C));
+
+
+  if(currentState == lastHallState) { //the motor hasn't changed position, so check if enough time has passed
+    if(millis() - lastHallChange > stopThresholdTime) {
+      //the motor is stopped because it's halls haven't changed in stopThresholdTime (~10ms)
+      //leave both lastHallState and lastHallChange alone, because we have no reason to change them.
+      return true;
+    }
+
+    //the motor could be stopped, but we need to wait longer
+    //leave both lastHallState and lastHallChange alone, because we'll want to check those later
+  }
+
+  //the hall positions have changed, so the motor must be turning
+  //the last state of the hall effect sensors is no longer valid, so update both it and when it was last changed
+  lastHallState = currentState;
+  lastHallChange = millis();
+  
+  return false;
 }
 
 void setup() {
@@ -140,6 +181,13 @@ void setup() {
   pinMode(RIGHT_MOTOR_DIR, OUTPUT);
   pinMode(RIGHT_MOTOR_PWM, OUTPUT);
 
+  pinMode(LEFT_HALL_A, INPUT);
+  pinMode(LEFT_HALL_B, INPUT);
+  pinMode(LEFT_HALL_C, INPUT);
+  pinMode(RIGHT_HALL_A, INPUT);
+  pinMode(RIGHT_HALL_B, INPUT);
+  pinMode(RIGHT_HALL_C, INPUT);
+
   //turn on PID
   leftPID.SetOutputLimits(MIN_MOTOR_OUTPUT, MAX_MOTOR_OUTPUT); //set the output limits of the PID controllers
   rightPID.SetOutputLimits(MIN_MOTOR_OUTPUT, MAX_MOTOR_OUTPUT);
@@ -153,5 +201,7 @@ void loop() {
   leftPID.Compute(); //recompute motor PIDs
   rightPID.Compute();
 
-  updateMotors(&controlVector); //update motor speeds
+  printStateVector(&controlVector);
+  println(isMotorStopped());
+  //updateMotors(&controlVector); //update motor speeds
 }
