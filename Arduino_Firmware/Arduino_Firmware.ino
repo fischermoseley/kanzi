@@ -23,7 +23,8 @@ cool with it!
 #include <Wire.h>
 #include "SparkFun_BNO080_Arduino_Library.h"
 #include <math.h>
-
+#define FORWARD 0 //the logic level on the direction pin that makes the motor go forwards
+#define REVERSE 1 //the logic level on the direction pin that makes the motor go backwards
 
 /*--------------- State Variables -----------------*/
 struct eulerAngle{ double yaw; double pitch; double roll; };
@@ -33,17 +34,90 @@ eulerAngle gyroRate;
 struct stateVector { double left_motor; double right_motor; };
 stateVector controlVector;
 
-uint8_t stopThresholdTime = 10 //the amount of time (in ms) that has to pass where the hall effect sensors don't change to be considered "stopped"
-uint8_t lastHallState = 0;
-unsigned long lastHallChange = millis(); //variable to keep track of the last time the hall effect sensors changed, and therefore when the motors were moving
+struct Motor {
+  //configuration
+  uint8_t stopThresholdTime = 10; //the amount of time (in ms) that has to pass where the hall effect sensors don't change to be considered "stopped"
+  const int16_t MIN_MOTOR_OUTPUT = -255;
+  const uint8_t MAX_MOTOR_OUTPUT = 255;
+
+  //IO pin definitions
+  uint8_t HALL_A_PIN = 0;
+  uint8_t HALL_B_PIN = 0;
+  uint8_t HALL_C_PIN = 0;
+  uint8_t PWM_PIN = 0;
+  uint8_t DIR_PIN = 0;
+
+  //state variables
+  uint8_t lastHallState = 0;
+  unsigned long lastHallChange = millis(); //timestamp (in MCU time) of the last time that the hall effect sensor's state changed
+
+  int16_t pwm = 0; // the duty cycle of the PWM on the high side motor FETS, from -255 (full reverse) to 255 (full forwards)
+  
+  //set internal variables and configure GPIO
+  void init(uint8_t Hall_A, uint8_t Hall_B, uint8_t Hall_C, uint8_t PWM, uint8_t Dir) {
+    //set internal variables with pin definitions
+    HALL_A_PIN = Hall_A;
+    HALL_B_PIN = Hall_B;
+    HALL_C_PIN = Hall_C;
+
+    PWM_PIN = PWM;
+    DIR_PIN = Dir;
+
+    //configure IO
+    pinMode(HALL_A_PIN, INPUT);
+    pinMode(HALL_B_PIN, INPUT);
+    pinMode(HALL_C_PIN, INPUT);
+    
+    pinMode(PWM_PIN, OUTPUT);
+    pinMode(DIR_PIN, OUTPUT);
+  }
+
+  //returns true if the motor's hall effect sensors haven't changed in the last 10ms, false otherwise
+  bool isStopped() {
+    //get the current state of the hall effect array
+    uint8_t currentState = 0x00;
+    bitWrite(currentState, 2, digitalRead(HALL_A_PIN));
+    bitWrite(currentState, 1, digitalRead(HALL_B_PIN));
+    bitWrite(currentState, 0, digitalRead(HALL_C_PIN));
+
+
+    if(currentState == lastHallState) { //the motor hasn't changed position, so check if enough time has passed
+      if(millis() - lastHallChange > stopThresholdTime) {
+        //the motor is stopped because it's halls haven't changed in stopThresholdTime (~10ms)
+        //leave both lastHallState and lastHallChange alone, because we have no reason to change them.
+        return true;
+      }
+
+      //the motor could be stopped, but we need to wait longer
+      //leave both lastHallState and lastHallChange alone, because we'll want to check those later
+    }
+
+    //the hall positions have changed, so the motor must be turning
+    //the last state of the hall effect sensors is no longer valid, so update both it and when it was last changed
+    lastHallState = currentState;
+    lastHallChange = millis();
+    
+    return false;
+  }
+
+  //updates IO, pushes motor state
+  bool update(double new_pwm){
+    //cast the left and right motor controls to int16_t, as they are stored as doubles (required by PID library :/)
+    uint16_t pwm = static_cast<int16_t>(new_pwm);
+
+    //if the new PWM command is outside the allowable range, don't do anything and return with error
+    if(pwm > MAX_MOTOR_OUTPUT || pwm < MIN_MOTOR_OUTPUT) return 1;
+
+    if(pwm < 0) digitalWrite(DIR_PIN, REVERSE);
+    if(pwm > 0) digitalWrite(DIR_PIN, FORWARD);
+
+    analogWrite(PWM_PIN, abs(pwm));
+    return 0;
+  }
+};
+
 
 /*------------- Hardware Configuration ----------- */
-//PSoC motor controller configuration
-#define MIN_MOTOR_OUTPUT -255
-#define MAX_MOTOR_OUTPUT 255
-#define FORWARD 0 //the logic level on the direction pin that makes the motor go forwards
-#define REVERSE 1 //the logic level on the direction pin that makes the motor go backwards
-
 //IO pins to use for interfacing with the PSoC controller
 #define LEFT_MOTOR_PWM 5
 #define RIGHT_MOTOR_PWM 6
@@ -51,12 +125,15 @@ unsigned long lastHallChange = millis(); //variable to keep track of the last ti
 #define RIGHT_MOTOR_DIR 8
 
 //IO pins to use for interfacing with the hall effect sensors
-#define LEFT_HALL_A
-#define LEFT_HALL_B
-#define LEFT_HALL_C
-#define RIGHT_HALL_A
-#define RIGHT_HALL_B
-#define RIGHT_HALL_C
+#define LEFT_HALL_A 1
+#define LEFT_HALL_B 1
+#define LEFT_HALL_C 1
+#define RIGHT_HALL_A 1
+#define RIGHT_HALL_B 1
+#define RIGHT_HALL_C 1
+
+//Motor configuration
+Motor leftMotor, rightMotor;
 
 //IMU configuration
 BNO080 IMU;
@@ -106,31 +183,7 @@ void updateGyroRate(struct eulerAngle* angleVariable){
   }
 }
 
-uint8_t updateMotors(struct stateVector* controlVector){
-    //send command to the PSoC motor controller with the new motor command using the values in controlVector.
-
-    //cast the left and right motor controls to uint8_t, as they are stored as doubles (required by PID library :/)
-    uint8_t left_motor = static_cast<uint8_t>(controlVector->left_motor);
-    uint8_t right_motor = static_cast<uint8_t>(controlVector->right_motor);
-
-    //check to see that both values are in check
-    if(left_motor > MAX_MOTOR_OUTPUT || left_motor < MIN_MOTOR_OUTPUT) return 1;
-    if(right_motor > MAX_MOTOR_OUTPUT || right_motor < MIN_MOTOR_OUTPUT) return 2;
-
-    //update the left motor
-    if(left_motor > 0) digitalWrite(LEFT_MOTOR_DIR, FORWARD);
-    if(left_motor < 0) digitalWrite(LEFT_MOTOR_DIR, REVERSE);
-    analogWrite(LEFT_MOTOR_PWM, abs(controlVector->left_motor));
-
-    //update the right motor
-    if(right_motor > 0) digitalWrite(RIGHT_MOTOR_DIR, FORWARD);
-    if(right_motor < 0) digitalWrite(RIGHT_MOTOR_DIR, REVERSE);
-    analogWrite(RIGHT_MOTOR_PWM, abs(controlVector->right_motor));
-
-    return 0;
-}
-
-void printControlVector(struct stateVector* controlVector){
+void printStateVector(struct stateVector* controlVector){
   //prints to the serial port the current contents of controlVector.
 
   Serial.print("ControlVector: left_motor: ");
@@ -140,57 +193,21 @@ void printControlVector(struct stateVector* controlVector){
   Serial.println();
 }
 
-bool isMotorStopped() {
-  //get the current state of the hall effect array
-  uint8_t currentState = 0x00;
-  bitWrite(currentState, 2, digitalRead(LEFT_HALL_A));
-  bitWrite(currentState, 1, digitalRead(LEFT_HALL_B));
-  bitWrite(currentState, 0, digitalRead(LEFT_HALL_C));
-
-
-  if(currentState == lastHallState) { //the motor hasn't changed position, so check if enough time has passed
-    if(millis() - lastHallChange > stopThresholdTime) {
-      //the motor is stopped because it's halls haven't changed in stopThresholdTime (~10ms)
-      //leave both lastHallState and lastHallChange alone, because we have no reason to change them.
-      return true;
-    }
-
-    //the motor could be stopped, but we need to wait longer
-    //leave both lastHallState and lastHallChange alone, because we'll want to check those later
-  }
-
-  //the hall positions have changed, so the motor must be turning
-  //the last state of the hall effect sensors is no longer valid, so update both it and when it was last changed
-  lastHallState = currentState;
-  lastHallChange = millis();
-  
-  return false;
-}
-
 void setup() {
   //start up all them interfaces
   Serial.begin(115200);
-
   Wire.begin();
   Wire.setClock(400000);
   IMU.begin();
   IMU.enableRotationVector(10); //enable the rotation vector to be updated every 10ms
 
-  pinMode(LEFT_MOTOR_DIR, OUTPUT); //configure all the I/O
-  pinMode(LEFT_MOTOR_PWM, OUTPUT);
-  pinMode(RIGHT_MOTOR_DIR, OUTPUT);
-  pinMode(RIGHT_MOTOR_PWM, OUTPUT);
-
-  pinMode(LEFT_HALL_A, INPUT);
-  pinMode(LEFT_HALL_B, INPUT);
-  pinMode(LEFT_HALL_C, INPUT);
-  pinMode(RIGHT_HALL_A, INPUT);
-  pinMode(RIGHT_HALL_B, INPUT);
-  pinMode(RIGHT_HALL_C, INPUT);
+  //configure the motor GPIO
+  leftMotor.init(LEFT_HALL_A, LEFT_HALL_B, LEFT_HALL_C, LEFT_MOTOR_PWM, LEFT_MOTOR_DIR);
+  rightMotor.init(RIGHT_HALL_A, RIGHT_HALL_B, RIGHT_HALL_C, RIGHT_MOTOR_PWM, RIGHT_MOTOR_DIR);
 
   //turn on PID
-  leftPID.SetOutputLimits(MIN_MOTOR_OUTPUT, MAX_MOTOR_OUTPUT); //set the output limits of the PID controllers
-  rightPID.SetOutputLimits(MIN_MOTOR_OUTPUT, MAX_MOTOR_OUTPUT);
+  leftPID.SetOutputLimits(leftMotor.MIN_MOTOR_OUTPUT, leftMotor.MAX_MOTOR_OUTPUT); //set the output limits of the PID controllers
+  rightPID.SetOutputLimits(rightMotor.MIN_MOTOR_OUTPUT, rightMotor.MAX_MOTOR_OUTPUT);
   leftPID.SetMode(AUTOMATIC);
   rightPID.SetMode(AUTOMATIC);
 }
@@ -202,6 +219,5 @@ void loop() {
   rightPID.Compute();
 
   printStateVector(&controlVector);
-  println(isMotorStopped());
-  //updateMotors(&controlVector); //update motor speeds
+  Serial.println(leftMotor.isStopped());
 }
