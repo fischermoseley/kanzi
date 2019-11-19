@@ -1,0 +1,1306 @@
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.writeToFETs,"ax",%progbits
+  20              		.align	2
+  21              		.global	writeToFETs
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	writeToFETs, %function
+  25              	writeToFETs:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** #define True 1
+   2:main.c        **** #define False 0
+   3:main.c        **** #include "project.h"
+   4:main.c        **** 
+   5:main.c        **** #define bitRead(value, bit) (((value) >> (bit)) & 0x01)
+   6:main.c        **** 
+   7:main.c        **** void writeToFETs(uint8_t status) {
+  28              		.loc 1 7 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 10B5     		push	{r4, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  37 0002 0446     		mov	r4, r0
+   8:main.c        ****   LEFT_HA_Write(bitRead(status, 5));
+  38              		.loc 1 8 0
+  39 0004 C0F34010 		ubfx	r0, r0, #5, #1
+  40              	.LVL1:
+  41 0008 FFF7FEFF 		bl	LEFT_HA_Write
+  42              	.LVL2:
+   9:main.c        ****   LEFT_LA_Write(bitRead(status, 4));
+  43              		.loc 1 9 0
+  44 000c C4F30010 		ubfx	r0, r4, #4, #1
+  45 0010 FFF7FEFF 		bl	LEFT_LA_Write
+  46              	.LVL3:
+  10:main.c        ****   LEFT_HB_Write(bitRead(status, 3));
+  47              		.loc 1 10 0
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 2
+
+
+  48 0014 C4F3C000 		ubfx	r0, r4, #3, #1
+  49 0018 FFF7FEFF 		bl	LEFT_HB_Write
+  50              	.LVL4:
+  11:main.c        ****   LEFT_LB_Write(bitRead(status, 2));
+  51              		.loc 1 11 0
+  52 001c C4F38000 		ubfx	r0, r4, #2, #1
+  53 0020 FFF7FEFF 		bl	LEFT_LB_Write
+  54              	.LVL5:
+  12:main.c        ****   LEFT_HC_Write(bitRead(status, 1));
+  55              		.loc 1 12 0
+  56 0024 C4F34000 		ubfx	r0, r4, #1, #1
+  57 0028 FFF7FEFF 		bl	LEFT_HC_Write
+  58              	.LVL6:
+  13:main.c        ****   LEFT_LC_Write(bitRead(status, 0));
+  59              		.loc 1 13 0
+  60 002c 04F00100 		and	r0, r4, #1
+  61 0030 FFF7FEFF 		bl	LEFT_LC_Write
+  62              	.LVL7:
+  63 0034 10BD     		pop	{r4, pc}
+  64              		.cfi_endproc
+  65              	.LFE63:
+  66              		.size	writeToFETs, .-writeToFETs
+  67 0036 00BF     		.section	.text.main,"ax",%progbits
+  68              		.align	2
+  69              		.global	main
+  70              		.thumb
+  71              		.thumb_func
+  72              		.type	main, %function
+  73              	main:
+  74              	.LFB64:
+  14:main.c        **** }
+  15:main.c        **** 
+  16:main.c        **** 
+  17:main.c        **** int main(void) {
+  75              		.loc 1 17 0
+  76              		.cfi_startproc
+  77              		@ args = 0, pretend = 0, frame = 0
+  78              		@ frame_needed = 0, uses_anonymous_args = 0
+  79 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  80              		.cfi_def_cfa_offset 24
+  81              		.cfi_offset 3, -24
+  82              		.cfi_offset 4, -20
+  83              		.cfi_offset 5, -16
+  84              		.cfi_offset 6, -12
+  85              		.cfi_offset 7, -8
+  86              		.cfi_offset 14, -4
+  18:main.c        ****   CyGlobalIntEnable;
+  87              		.loc 1 18 0
+  88              		.syntax unified
+  89              	@ 18 "main.c" 1
+  90 0002 62B6     		CPSIE   i
+  91              	@ 0 "" 2
+  92              		.thumb
+  93              		.syntax unified
+  94              	.L11:
+  95              	.LBB2:
+  19:main.c        **** 
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 3
+
+
+  20:main.c        ****   while(True) {
+  21:main.c        ****     uint8_t left_direction = LEFT_DIR_Read();
+  96              		.loc 1 21 0
+  97 0004 FFF7FEFF 		bl	LEFT_DIR_Read
+  98              	.LVL8:
+  99 0008 0546     		mov	r5, r0
+ 100              	.LVL9:
+  22:main.c        **** 
+  23:main.c        ****     //grab hall effect sensor states
+  24:main.c        ****     uint8_t left_hall_a = LEFT_HALL_A_Read();
+ 101              		.loc 1 24 0
+ 102 000a FFF7FEFF 		bl	LEFT_HALL_A_Read
+ 103              	.LVL10:
+ 104 000e 0746     		mov	r7, r0
+ 105              	.LVL11:
+  25:main.c        ****     uint8_t left_hall_b = LEFT_HALL_B_Read();
+ 106              		.loc 1 25 0
+ 107 0010 FFF7FEFF 		bl	LEFT_HALL_B_Read
+ 108              	.LVL12:
+ 109 0014 0646     		mov	r6, r0
+ 110              	.LVL13:
+  26:main.c        ****     uint8_t left_hall_c = LEFT_HALL_C_Read();
+ 111              		.loc 1 26 0
+ 112 0016 FFF7FEFF 		bl	LEFT_HALL_C_Read
+ 113              	.LVL14:
+ 114 001a 0446     		mov	r4, r0
+ 115              	.LVL15:
+  27:main.c        **** 
+  28:main.c        ****     //check to see what direction we're running in, and select the appropriate commutation table
+  29:main.c        ****     if(left_direction == 1) { //use forward commutation table
+ 116              		.loc 1 29 0
+ 117 001c 012D     		cmp	r5, #1
+ 118 001e 23D1     		bne	.L5
+  30:main.c        ****       if(left_hall_c && !left_hall_b && left_hall_a) writeToFETs(36); //101
+ 119              		.loc 1 30 0
+ 120 0020 20B1     		cbz	r0, .L6
+ 121              		.loc 1 30 0 is_stmt 0 discriminator 1
+ 122 0022 1EB9     		cbnz	r6, .L6
+ 123              		.loc 1 30 0 discriminator 2
+ 124 0024 17B1     		cbz	r7, .L6
+ 125              		.loc 1 30 0 discriminator 3
+ 126 0026 2420     		movs	r0, #36
+ 127              	.LVL16:
+ 128 0028 FFF7FEFF 		bl	writeToFETs
+ 129              	.LVL17:
+ 130              	.L6:
+  31:main.c        ****       if(left_hall_c && !left_hall_b && !left_hall_a) writeToFETs(6); //100
+ 131              		.loc 1 31 0 is_stmt 1
+ 132 002c 24B1     		cbz	r4, .L7
+ 133              		.loc 1 31 0 is_stmt 0 discriminator 1
+ 134 002e 1EB9     		cbnz	r6, .L7
+ 135              		.loc 1 31 0 discriminator 2
+ 136 0030 17B9     		cbnz	r7, .L7
+ 137              		.loc 1 31 0 discriminator 3
+ 138 0032 0620     		movs	r0, #6
+ 139 0034 FFF7FEFF 		bl	writeToFETs
+ 140              	.LVL18:
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 4
+
+
+ 141              	.L7:
+  32:main.c        ****       if(left_hall_c && left_hall_b && !left_hall_a) writeToFETs(18); //110
+ 142              		.loc 1 32 0 is_stmt 1
+ 143 0038 24B1     		cbz	r4, .L8
+ 144              		.loc 1 32 0 is_stmt 0 discriminator 1
+ 145 003a 1EB1     		cbz	r6, .L8
+ 146              		.loc 1 32 0 discriminator 2
+ 147 003c 17B9     		cbnz	r7, .L8
+ 148              		.loc 1 32 0 discriminator 3
+ 149 003e 1220     		movs	r0, #18
+ 150 0040 FFF7FEFF 		bl	writeToFETs
+ 151              	.LVL19:
+ 152              	.L8:
+  33:main.c        ****       if(!left_hall_c && left_hall_b && !left_hall_a) writeToFETs(24); //010
+ 153              		.loc 1 33 0 is_stmt 1
+ 154 0044 24B9     		cbnz	r4, .L9
+ 155              		.loc 1 33 0 is_stmt 0 discriminator 1
+ 156 0046 1EB1     		cbz	r6, .L9
+ 157              		.loc 1 33 0 discriminator 2
+ 158 0048 17B9     		cbnz	r7, .L9
+ 159              		.loc 1 33 0 discriminator 3
+ 160 004a 1820     		movs	r0, #24
+ 161 004c FFF7FEFF 		bl	writeToFETs
+ 162              	.LVL20:
+ 163              	.L9:
+  34:main.c        ****       if(!left_hall_c && left_hall_b && left_hall_a) writeToFETs(9); //011
+ 164              		.loc 1 34 0 is_stmt 1
+ 165 0050 24B9     		cbnz	r4, .L10
+ 166              		.loc 1 34 0 is_stmt 0 discriminator 1
+ 167 0052 1EB1     		cbz	r6, .L10
+ 168              		.loc 1 34 0 discriminator 2
+ 169 0054 17B1     		cbz	r7, .L10
+ 170              		.loc 1 34 0 discriminator 3
+ 171 0056 0920     		movs	r0, #9
+ 172 0058 FFF7FEFF 		bl	writeToFETs
+ 173              	.LVL21:
+ 174              	.L10:
+  35:main.c        ****       if(!left_hall_c && !left_hall_b && left_hall_a) writeToFETs(33); //001
+ 175              		.loc 1 35 0 is_stmt 1
+ 176 005c 24B9     		cbnz	r4, .L5
+ 177              		.loc 1 35 0 is_stmt 0 discriminator 1
+ 178 005e 1EB9     		cbnz	r6, .L5
+ 179              		.loc 1 35 0 discriminator 2
+ 180 0060 17B1     		cbz	r7, .L5
+ 181              		.loc 1 35 0 discriminator 3
+ 182 0062 2120     		movs	r0, #33
+ 183 0064 FFF7FEFF 		bl	writeToFETs
+ 184              	.LVL22:
+ 185              	.L5:
+  36:main.c        ****     }
+  37:main.c        **** 
+  38:main.c        ****     if(left_direction == 0) { //use reverse commutation table
+ 186              		.loc 1 38 0 is_stmt 1
+ 187 0068 002D     		cmp	r5, #0
+ 188 006a CBD1     		bne	.L11
+  39:main.c        ****       if(!left_hall_c && !left_hall_b && left_hall_a) writeToFETs(18); //001
+ 189              		.loc 1 39 0
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 5
+
+
+ 190 006c 24B9     		cbnz	r4, .L12
+ 191              		.loc 1 39 0 is_stmt 0 discriminator 1
+ 192 006e 1EB9     		cbnz	r6, .L12
+ 193              		.loc 1 39 0 discriminator 2
+ 194 0070 17B1     		cbz	r7, .L12
+ 195              		.loc 1 39 0 discriminator 3
+ 196 0072 1220     		movs	r0, #18
+ 197 0074 FFF7FEFF 		bl	writeToFETs
+ 198              	.LVL23:
+ 199              	.L12:
+  40:main.c        ****       if(!left_hall_c && left_hall_b && !left_hall_a) writeToFETs(36); //010
+ 200              		.loc 1 40 0 is_stmt 1
+ 201 0078 24B9     		cbnz	r4, .L13
+ 202              		.loc 1 40 0 is_stmt 0 discriminator 1
+ 203 007a 1EB1     		cbz	r6, .L13
+ 204              		.loc 1 40 0 discriminator 2
+ 205 007c 17B9     		cbnz	r7, .L13
+ 206              		.loc 1 40 0 discriminator 3
+ 207 007e 2420     		movs	r0, #36
+ 208 0080 FFF7FEFF 		bl	writeToFETs
+ 209              	.LVL24:
+ 210              	.L13:
+  41:main.c        ****       if(!left_hall_c && left_hall_b && left_hall_a) writeToFETs(6); //011
+ 211              		.loc 1 41 0 is_stmt 1
+ 212 0084 24B9     		cbnz	r4, .L14
+ 213              		.loc 1 41 0 is_stmt 0 discriminator 1
+ 214 0086 1EB1     		cbz	r6, .L14
+ 215              		.loc 1 41 0 discriminator 2
+ 216 0088 17B1     		cbz	r7, .L14
+ 217              		.loc 1 41 0 discriminator 3
+ 218 008a 0620     		movs	r0, #6
+ 219 008c FFF7FEFF 		bl	writeToFETs
+ 220              	.LVL25:
+ 221              	.L14:
+  42:main.c        ****       if(left_hall_c && !left_hall_b && !left_hall_a) writeToFETs(9); //100
+ 222              		.loc 1 42 0 is_stmt 1
+ 223 0090 24B1     		cbz	r4, .L15
+ 224              		.loc 1 42 0 is_stmt 0 discriminator 1
+ 225 0092 1EB9     		cbnz	r6, .L15
+ 226              		.loc 1 42 0 discriminator 2
+ 227 0094 17B9     		cbnz	r7, .L15
+ 228              		.loc 1 42 0 discriminator 3
+ 229 0096 0920     		movs	r0, #9
+ 230 0098 FFF7FEFF 		bl	writeToFETs
+ 231              	.LVL26:
+ 232              	.L15:
+  43:main.c        ****       if(left_hall_c && !left_hall_b && left_hall_a) writeToFETs(24); //101
+ 233              		.loc 1 43 0 is_stmt 1
+ 234 009c 24B1     		cbz	r4, .L16
+ 235              		.loc 1 43 0 is_stmt 0 discriminator 1
+ 236 009e 1EB9     		cbnz	r6, .L16
+ 237              		.loc 1 43 0 discriminator 2
+ 238 00a0 17B1     		cbz	r7, .L16
+ 239              		.loc 1 43 0 discriminator 3
+ 240 00a2 1820     		movs	r0, #24
+ 241 00a4 FFF7FEFF 		bl	writeToFETs
+ 242              	.LVL27:
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 6
+
+
+ 243              	.L16:
+  44:main.c        ****       if(left_hall_c && left_hall_b && !left_hall_a) writeToFETs(33); //110
+ 244              		.loc 1 44 0 is_stmt 1
+ 245 00a8 002C     		cmp	r4, #0
+ 246 00aa ABD0     		beq	.L11
+ 247              		.loc 1 44 0 is_stmt 0 discriminator 1
+ 248 00ac 002E     		cmp	r6, #0
+ 249 00ae A9D0     		beq	.L11
+ 250              		.loc 1 44 0 discriminator 2
+ 251 00b0 002F     		cmp	r7, #0
+ 252 00b2 A7D1     		bne	.L11
+ 253              		.loc 1 44 0 discriminator 3
+ 254 00b4 2120     		movs	r0, #33
+ 255 00b6 FFF7FEFF 		bl	writeToFETs
+ 256              	.LVL28:
+ 257 00ba A3E7     		b	.L11
+ 258              	.LBE2:
+ 259              		.cfi_endproc
+ 260              	.LFE64:
+ 261              		.size	main, .-main
+ 262              		.text
+ 263              	.Letext0:
+ 264              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 265              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 266              		.file 4 "Generated_Source\\PSoC5/LEFT_HA.h"
+ 267              		.file 5 "Generated_Source\\PSoC5/LEFT_LA.h"
+ 268              		.file 6 "Generated_Source\\PSoC5/LEFT_HB.h"
+ 269              		.file 7 "Generated_Source\\PSoC5/LEFT_LB.h"
+ 270              		.file 8 "Generated_Source\\PSoC5/LEFT_HC.h"
+ 271              		.file 9 "Generated_Source\\PSoC5/LEFT_LC.h"
+ 272              		.file 10 "Generated_Source\\PSoC5/LEFT_DIR.h"
+ 273              		.file 11 "Generated_Source\\PSoC5/LEFT_HALL_A.h"
+ 274              		.file 12 "Generated_Source\\PSoC5/LEFT_HALL_B.h"
+ 275              		.file 13 "Generated_Source\\PSoC5/LEFT_HALL_C.h"
+ 276              		.file 14 "Generated_Source\\PSoC5/core_cm3.h"
+ 277              		.section	.debug_info,"",%progbits
+ 278              	.Ldebug_info0:
+ 279 0000 47030000 		.4byte	0x347
+ 280 0004 0400     		.2byte	0x4
+ 281 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 282 000a 04       		.byte	0x4
+ 283 000b 01       		.uleb128 0x1
+ 284 000c A1000000 		.4byte	.LASF32
+ 285 0010 0C       		.byte	0xc
+ 286 0011 4C020000 		.4byte	.LASF33
+ 287 0015 9D010000 		.4byte	.LASF34
+ 288 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 289 001d 00000000 		.4byte	0
+ 290 0021 00000000 		.4byte	.Ldebug_line0
+ 291 0025 02       		.uleb128 0x2
+ 292 0026 01       		.byte	0x1
+ 293 0027 06       		.byte	0x6
+ 294 0028 91020000 		.4byte	.LASF0
+ 295 002c 03       		.uleb128 0x3
+ 296 002d 00000000 		.4byte	.LASF4
+ 297 0031 02       		.byte	0x2
+ 298 0032 1D       		.byte	0x1d
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 7
+
+
+ 299 0033 37000000 		.4byte	0x37
+ 300 0037 02       		.uleb128 0x2
+ 301 0038 01       		.byte	0x1
+ 302 0039 08       		.byte	0x8
+ 303 003a 93000000 		.4byte	.LASF1
+ 304 003e 02       		.uleb128 0x2
+ 305 003f 02       		.byte	0x2
+ 306 0040 05       		.byte	0x5
+ 307 0041 8E010000 		.4byte	.LASF2
+ 308 0045 02       		.uleb128 0x2
+ 309 0046 02       		.byte	0x2
+ 310 0047 07       		.byte	0x7
+ 311 0048 4E010000 		.4byte	.LASF3
+ 312 004c 03       		.uleb128 0x3
+ 313 004d 27000000 		.4byte	.LASF5
+ 314 0051 02       		.byte	0x2
+ 315 0052 3F       		.byte	0x3f
+ 316 0053 57000000 		.4byte	0x57
+ 317 0057 02       		.uleb128 0x2
+ 318 0058 04       		.byte	0x4
+ 319 0059 05       		.byte	0x5
+ 320 005a 7C020000 		.4byte	.LASF6
+ 321 005e 02       		.uleb128 0x2
+ 322 005f 04       		.byte	0x4
+ 323 0060 07       		.byte	0x7
+ 324 0061 6E010000 		.4byte	.LASF7
+ 325 0065 02       		.uleb128 0x2
+ 326 0066 08       		.byte	0x8
+ 327 0067 05       		.byte	0x5
+ 328 0068 3E020000 		.4byte	.LASF8
+ 329 006c 02       		.uleb128 0x2
+ 330 006d 08       		.byte	0x8
+ 331 006e 07       		.byte	0x7
+ 332 006f F7010000 		.4byte	.LASF9
+ 333 0073 04       		.uleb128 0x4
+ 334 0074 04       		.byte	0x4
+ 335 0075 05       		.byte	0x5
+ 336 0076 696E7400 		.ascii	"int\000"
+ 337 007a 02       		.uleb128 0x2
+ 338 007b 04       		.byte	0x4
+ 339 007c 07       		.byte	0x7
+ 340 007d 4E000000 		.4byte	.LASF10
+ 341 0081 03       		.uleb128 0x3
+ 342 0082 0E020000 		.4byte	.LASF11
+ 343 0086 03       		.byte	0x3
+ 344 0087 18       		.byte	0x18
+ 345 0088 2C000000 		.4byte	0x2c
+ 346 008c 03       		.uleb128 0x3
+ 347 008d 69000000 		.4byte	.LASF12
+ 348 0091 03       		.byte	0x3
+ 349 0092 2C       		.byte	0x2c
+ 350 0093 4C000000 		.4byte	0x4c
+ 351 0097 02       		.uleb128 0x2
+ 352 0098 04       		.byte	0x4
+ 353 0099 04       		.byte	0x4
+ 354 009a 8D000000 		.4byte	.LASF13
+ 355 009e 02       		.uleb128 0x2
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 8
+
+
+ 356 009f 08       		.byte	0x8
+ 357 00a0 04       		.byte	0x4
+ 358 00a1 5B000000 		.4byte	.LASF14
+ 359 00a5 02       		.uleb128 0x2
+ 360 00a6 01       		.byte	0x1
+ 361 00a7 08       		.byte	0x8
+ 362 00a8 53020000 		.4byte	.LASF15
+ 363 00ac 02       		.uleb128 0x2
+ 364 00ad 08       		.byte	0x8
+ 365 00ae 04       		.byte	0x4
+ 366 00af 85020000 		.4byte	.LASF16
+ 367 00b3 02       		.uleb128 0x2
+ 368 00b4 04       		.byte	0x4
+ 369 00b5 07       		.byte	0x7
+ 370 00b6 35020000 		.4byte	.LASF17
+ 371 00ba 05       		.uleb128 0x5
+ 372 00bb 0A000000 		.4byte	.LASF35
+ 373 00bf 01       		.byte	0x1
+ 374 00c0 07       		.byte	0x7
+ 375 00c1 00000000 		.4byte	.LFB63
+ 376 00c5 36000000 		.4byte	.LFE63-.LFB63
+ 377 00c9 01       		.uleb128 0x1
+ 378 00ca 9C       		.byte	0x9c
+ 379 00cb 69010000 		.4byte	0x169
+ 380 00cf 06       		.uleb128 0x6
+ 381 00d0 62000000 		.4byte	.LASF36
+ 382 00d4 01       		.byte	0x1
+ 383 00d5 07       		.byte	0x7
+ 384 00d6 81000000 		.4byte	0x81
+ 385 00da 00000000 		.4byte	.LLST0
+ 386 00de 07       		.uleb128 0x7
+ 387 00df 0C000000 		.4byte	.LVL2
+ 388 00e3 DC020000 		.4byte	0x2dc
+ 389 00e7 F7000000 		.4byte	0xf7
+ 390 00eb 08       		.uleb128 0x8
+ 391 00ec 01       		.uleb128 0x1
+ 392 00ed 50       		.byte	0x50
+ 393 00ee 07       		.uleb128 0x7
+ 394 00ef 74       		.byte	0x74
+ 395 00f0 00       		.sleb128 0
+ 396 00f1 09       		.byte	0x9
+ 397 00f2 FE       		.byte	0xfe
+ 398 00f3 24       		.byte	0x24
+ 399 00f4 33       		.byte	0x33
+ 400 00f5 25       		.byte	0x25
+ 401 00f6 00       		.byte	0
+ 402 00f7 07       		.uleb128 0x7
+ 403 00f8 14000000 		.4byte	.LVL3
+ 404 00fc E7020000 		.4byte	0x2e7
+ 405 0100 10010000 		.4byte	0x110
+ 406 0104 08       		.uleb128 0x8
+ 407 0105 01       		.uleb128 0x1
+ 408 0106 50       		.byte	0x50
+ 409 0107 07       		.uleb128 0x7
+ 410 0108 74       		.byte	0x74
+ 411 0109 00       		.sleb128 0
+ 412 010a 09       		.byte	0x9
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 9
+
+
+ 413 010b FF       		.byte	0xff
+ 414 010c 24       		.byte	0x24
+ 415 010d 33       		.byte	0x33
+ 416 010e 25       		.byte	0x25
+ 417 010f 00       		.byte	0
+ 418 0110 07       		.uleb128 0x7
+ 419 0111 1C000000 		.4byte	.LVL4
+ 420 0115 F2020000 		.4byte	0x2f2
+ 421 0119 26010000 		.4byte	0x126
+ 422 011d 08       		.uleb128 0x8
+ 423 011e 01       		.uleb128 0x1
+ 424 011f 50       		.byte	0x50
+ 425 0120 04       		.uleb128 0x4
+ 426 0121 74       		.byte	0x74
+ 427 0122 00       		.sleb128 0
+ 428 0123 33       		.byte	0x33
+ 429 0124 25       		.byte	0x25
+ 430 0125 00       		.byte	0
+ 431 0126 07       		.uleb128 0x7
+ 432 0127 24000000 		.4byte	.LVL5
+ 433 012b FD020000 		.4byte	0x2fd
+ 434 012f 3E010000 		.4byte	0x13e
+ 435 0133 08       		.uleb128 0x8
+ 436 0134 01       		.uleb128 0x1
+ 437 0135 50       		.byte	0x50
+ 438 0136 06       		.uleb128 0x6
+ 439 0137 74       		.byte	0x74
+ 440 0138 00       		.sleb128 0
+ 441 0139 31       		.byte	0x31
+ 442 013a 24       		.byte	0x24
+ 443 013b 33       		.byte	0x33
+ 444 013c 25       		.byte	0x25
+ 445 013d 00       		.byte	0
+ 446 013e 07       		.uleb128 0x7
+ 447 013f 2C000000 		.4byte	.LVL6
+ 448 0143 08030000 		.4byte	0x308
+ 449 0147 56010000 		.4byte	0x156
+ 450 014b 08       		.uleb128 0x8
+ 451 014c 01       		.uleb128 0x1
+ 452 014d 50       		.byte	0x50
+ 453 014e 06       		.uleb128 0x6
+ 454 014f 74       		.byte	0x74
+ 455 0150 00       		.sleb128 0
+ 456 0151 32       		.byte	0x32
+ 457 0152 24       		.byte	0x24
+ 458 0153 33       		.byte	0x33
+ 459 0154 25       		.byte	0x25
+ 460 0155 00       		.byte	0
+ 461 0156 09       		.uleb128 0x9
+ 462 0157 34000000 		.4byte	.LVL7
+ 463 015b 13030000 		.4byte	0x313
+ 464 015f 08       		.uleb128 0x8
+ 465 0160 01       		.uleb128 0x1
+ 466 0161 50       		.byte	0x50
+ 467 0162 04       		.uleb128 0x4
+ 468 0163 74       		.byte	0x74
+ 469 0164 00       		.sleb128 0
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 10
+
+
+ 470 0165 31       		.byte	0x31
+ 471 0166 1A       		.byte	0x1a
+ 472 0167 00       		.byte	0
+ 473 0168 00       		.byte	0
+ 474 0169 0A       		.uleb128 0xa
+ 475 016a 98010000 		.4byte	.LASF37
+ 476 016e 01       		.byte	0x1
+ 477 016f 11       		.byte	0x11
+ 478 0170 73000000 		.4byte	0x73
+ 479 0174 00000000 		.4byte	.LFB64
+ 480 0178 BC000000 		.4byte	.LFE64-.LFB64
+ 481 017c 01       		.uleb128 0x1
+ 482 017d 9C       		.byte	0x9c
+ 483 017e CB020000 		.4byte	0x2cb
+ 484 0182 0B       		.uleb128 0xb
+ 485 0183 04000000 		.4byte	.LBB2
+ 486 0187 B8000000 		.4byte	.LBE2-.LBB2
+ 487 018b 0C       		.uleb128 0xc
+ 488 018c 31000000 		.4byte	.LASF18
+ 489 0190 01       		.byte	0x1
+ 490 0191 15       		.byte	0x15
+ 491 0192 81000000 		.4byte	0x81
+ 492 0196 01       		.uleb128 0x1
+ 493 0197 55       		.byte	0x55
+ 494 0198 0C       		.uleb128 0xc
+ 495 0199 58020000 		.4byte	.LASF19
+ 496 019d 01       		.byte	0x1
+ 497 019e 18       		.byte	0x18
+ 498 019f 81000000 		.4byte	0x81
+ 499 01a3 01       		.uleb128 0x1
+ 500 01a4 57       		.byte	0x57
+ 501 01a5 0C       		.uleb128 0xc
+ 502 01a6 64020000 		.4byte	.LASF20
+ 503 01aa 01       		.byte	0x1
+ 504 01ab 19       		.byte	0x19
+ 505 01ac 81000000 		.4byte	0x81
+ 506 01b0 01       		.uleb128 0x1
+ 507 01b1 56       		.byte	0x56
+ 508 01b2 0D       		.uleb128 0xd
+ 509 01b3 70020000 		.4byte	.LASF21
+ 510 01b7 01       		.byte	0x1
+ 511 01b8 1A       		.byte	0x1a
+ 512 01b9 81000000 		.4byte	0x81
+ 513 01bd 21000000 		.4byte	.LLST1
+ 514 01c1 0E       		.uleb128 0xe
+ 515 01c2 08000000 		.4byte	.LVL8
+ 516 01c6 1E030000 		.4byte	0x31e
+ 517 01ca 0E       		.uleb128 0xe
+ 518 01cb 0E000000 		.4byte	.LVL10
+ 519 01cf 29030000 		.4byte	0x329
+ 520 01d3 0E       		.uleb128 0xe
+ 521 01d4 14000000 		.4byte	.LVL12
+ 522 01d8 34030000 		.4byte	0x334
+ 523 01dc 0E       		.uleb128 0xe
+ 524 01dd 1A000000 		.4byte	.LVL14
+ 525 01e1 3F030000 		.4byte	0x33f
+ 526 01e5 07       		.uleb128 0x7
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 11
+
+
+ 527 01e6 2C000000 		.4byte	.LVL17
+ 528 01ea BA000000 		.4byte	0xba
+ 529 01ee F9010000 		.4byte	0x1f9
+ 530 01f2 08       		.uleb128 0x8
+ 531 01f3 01       		.uleb128 0x1
+ 532 01f4 50       		.byte	0x50
+ 533 01f5 02       		.uleb128 0x2
+ 534 01f6 08       		.byte	0x8
+ 535 01f7 24       		.byte	0x24
+ 536 01f8 00       		.byte	0
+ 537 01f9 07       		.uleb128 0x7
+ 538 01fa 38000000 		.4byte	.LVL18
+ 539 01fe BA000000 		.4byte	0xba
+ 540 0202 0C020000 		.4byte	0x20c
+ 541 0206 08       		.uleb128 0x8
+ 542 0207 01       		.uleb128 0x1
+ 543 0208 50       		.byte	0x50
+ 544 0209 01       		.uleb128 0x1
+ 545 020a 36       		.byte	0x36
+ 546 020b 00       		.byte	0
+ 547 020c 07       		.uleb128 0x7
+ 548 020d 44000000 		.4byte	.LVL19
+ 549 0211 BA000000 		.4byte	0xba
+ 550 0215 1F020000 		.4byte	0x21f
+ 551 0219 08       		.uleb128 0x8
+ 552 021a 01       		.uleb128 0x1
+ 553 021b 50       		.byte	0x50
+ 554 021c 01       		.uleb128 0x1
+ 555 021d 42       		.byte	0x42
+ 556 021e 00       		.byte	0
+ 557 021f 07       		.uleb128 0x7
+ 558 0220 50000000 		.4byte	.LVL20
+ 559 0224 BA000000 		.4byte	0xba
+ 560 0228 32020000 		.4byte	0x232
+ 561 022c 08       		.uleb128 0x8
+ 562 022d 01       		.uleb128 0x1
+ 563 022e 50       		.byte	0x50
+ 564 022f 01       		.uleb128 0x1
+ 565 0230 48       		.byte	0x48
+ 566 0231 00       		.byte	0
+ 567 0232 07       		.uleb128 0x7
+ 568 0233 5C000000 		.4byte	.LVL21
+ 569 0237 BA000000 		.4byte	0xba
+ 570 023b 45020000 		.4byte	0x245
+ 571 023f 08       		.uleb128 0x8
+ 572 0240 01       		.uleb128 0x1
+ 573 0241 50       		.byte	0x50
+ 574 0242 01       		.uleb128 0x1
+ 575 0243 39       		.byte	0x39
+ 576 0244 00       		.byte	0
+ 577 0245 07       		.uleb128 0x7
+ 578 0246 68000000 		.4byte	.LVL22
+ 579 024a BA000000 		.4byte	0xba
+ 580 024e 59020000 		.4byte	0x259
+ 581 0252 08       		.uleb128 0x8
+ 582 0253 01       		.uleb128 0x1
+ 583 0254 50       		.byte	0x50
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 12
+
+
+ 584 0255 02       		.uleb128 0x2
+ 585 0256 08       		.byte	0x8
+ 586 0257 21       		.byte	0x21
+ 587 0258 00       		.byte	0
+ 588 0259 07       		.uleb128 0x7
+ 589 025a 78000000 		.4byte	.LVL23
+ 590 025e BA000000 		.4byte	0xba
+ 591 0262 6C020000 		.4byte	0x26c
+ 592 0266 08       		.uleb128 0x8
+ 593 0267 01       		.uleb128 0x1
+ 594 0268 50       		.byte	0x50
+ 595 0269 01       		.uleb128 0x1
+ 596 026a 42       		.byte	0x42
+ 597 026b 00       		.byte	0
+ 598 026c 07       		.uleb128 0x7
+ 599 026d 84000000 		.4byte	.LVL24
+ 600 0271 BA000000 		.4byte	0xba
+ 601 0275 80020000 		.4byte	0x280
+ 602 0279 08       		.uleb128 0x8
+ 603 027a 01       		.uleb128 0x1
+ 604 027b 50       		.byte	0x50
+ 605 027c 02       		.uleb128 0x2
+ 606 027d 08       		.byte	0x8
+ 607 027e 24       		.byte	0x24
+ 608 027f 00       		.byte	0
+ 609 0280 07       		.uleb128 0x7
+ 610 0281 90000000 		.4byte	.LVL25
+ 611 0285 BA000000 		.4byte	0xba
+ 612 0289 93020000 		.4byte	0x293
+ 613 028d 08       		.uleb128 0x8
+ 614 028e 01       		.uleb128 0x1
+ 615 028f 50       		.byte	0x50
+ 616 0290 01       		.uleb128 0x1
+ 617 0291 36       		.byte	0x36
+ 618 0292 00       		.byte	0
+ 619 0293 07       		.uleb128 0x7
+ 620 0294 9C000000 		.4byte	.LVL26
+ 621 0298 BA000000 		.4byte	0xba
+ 622 029c A6020000 		.4byte	0x2a6
+ 623 02a0 08       		.uleb128 0x8
+ 624 02a1 01       		.uleb128 0x1
+ 625 02a2 50       		.byte	0x50
+ 626 02a3 01       		.uleb128 0x1
+ 627 02a4 39       		.byte	0x39
+ 628 02a5 00       		.byte	0
+ 629 02a6 07       		.uleb128 0x7
+ 630 02a7 A8000000 		.4byte	.LVL27
+ 631 02ab BA000000 		.4byte	0xba
+ 632 02af B9020000 		.4byte	0x2b9
+ 633 02b3 08       		.uleb128 0x8
+ 634 02b4 01       		.uleb128 0x1
+ 635 02b5 50       		.byte	0x50
+ 636 02b6 01       		.uleb128 0x1
+ 637 02b7 48       		.byte	0x48
+ 638 02b8 00       		.byte	0
+ 639 02b9 09       		.uleb128 0x9
+ 640 02ba BA000000 		.4byte	.LVL28
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 13
+
+
+ 641 02be BA000000 		.4byte	0xba
+ 642 02c2 08       		.uleb128 0x8
+ 643 02c3 01       		.uleb128 0x1
+ 644 02c4 50       		.byte	0x50
+ 645 02c5 02       		.uleb128 0x2
+ 646 02c6 08       		.byte	0x8
+ 647 02c7 21       		.byte	0x21
+ 648 02c8 00       		.byte	0
+ 649 02c9 00       		.byte	0
+ 650 02ca 00       		.byte	0
+ 651 02cb 0F       		.uleb128 0xf
+ 652 02cc 61010000 		.4byte	.LASF38
+ 653 02d0 0E       		.byte	0xe
+ 654 02d1 1207     		.2byte	0x712
+ 655 02d3 D7020000 		.4byte	0x2d7
+ 656 02d7 10       		.uleb128 0x10
+ 657 02d8 8C000000 		.4byte	0x8c
+ 658 02dc 11       		.uleb128 0x11
+ 659 02dd 40000000 		.4byte	.LASF22
+ 660 02e1 40000000 		.4byte	.LASF22
+ 661 02e5 04       		.byte	0x4
+ 662 02e6 26       		.byte	0x26
+ 663 02e7 11       		.uleb128 0x11
+ 664 02e8 80010000 		.4byte	.LASF23
+ 665 02ec 80010000 		.4byte	.LASF23
+ 666 02f0 05       		.byte	0x5
+ 667 02f1 26       		.byte	0x26
+ 668 02f2 11       		.uleb128 0x11
+ 669 02f3 7F000000 		.4byte	.LASF24
+ 670 02f7 7F000000 		.4byte	.LASF24
+ 671 02fb 06       		.byte	0x6
+ 672 02fc 26       		.byte	0x26
+ 673 02fd 11       		.uleb128 0x11
+ 674 02fe E9010000 		.4byte	.LASF25
+ 675 0302 E9010000 		.4byte	.LASF25
+ 676 0306 07       		.byte	0x7
+ 677 0307 26       		.byte	0x26
+ 678 0308 11       		.uleb128 0x11
+ 679 0309 40010000 		.4byte	.LASF26
+ 680 030d 40010000 		.4byte	.LASF26
+ 681 0311 08       		.byte	0x8
+ 682 0312 26       		.byte	0x26
+ 683 0313 11       		.uleb128 0x11
+ 684 0314 16020000 		.4byte	.LASF27
+ 685 0318 16020000 		.4byte	.LASF27
+ 686 031c 09       		.byte	0x9
+ 687 031d 26       		.byte	0x26
+ 688 031e 11       		.uleb128 0x11
+ 689 031f 71000000 		.4byte	.LASF28
+ 690 0323 71000000 		.4byte	.LASF28
+ 691 0327 0A       		.byte	0xa
+ 692 0328 29       		.byte	0x29
+ 693 0329 11       		.uleb128 0x11
+ 694 032a 16000000 		.4byte	.LASF29
+ 695 032e 16000000 		.4byte	.LASF29
+ 696 0332 0B       		.byte	0xb
+ 697 0333 29       		.byte	0x29
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 14
+
+
+ 698 0334 11       		.uleb128 0x11
+ 699 0335 2F010000 		.4byte	.LASF30
+ 700 0339 2F010000 		.4byte	.LASF30
+ 701 033d 0C       		.byte	0xc
+ 702 033e 29       		.byte	0x29
+ 703 033f 11       		.uleb128 0x11
+ 704 0340 24020000 		.4byte	.LASF31
+ 705 0344 24020000 		.4byte	.LASF31
+ 706 0348 0D       		.byte	0xd
+ 707 0349 29       		.byte	0x29
+ 708 034a 00       		.byte	0
+ 709              		.section	.debug_abbrev,"",%progbits
+ 710              	.Ldebug_abbrev0:
+ 711 0000 01       		.uleb128 0x1
+ 712 0001 11       		.uleb128 0x11
+ 713 0002 01       		.byte	0x1
+ 714 0003 25       		.uleb128 0x25
+ 715 0004 0E       		.uleb128 0xe
+ 716 0005 13       		.uleb128 0x13
+ 717 0006 0B       		.uleb128 0xb
+ 718 0007 03       		.uleb128 0x3
+ 719 0008 0E       		.uleb128 0xe
+ 720 0009 1B       		.uleb128 0x1b
+ 721 000a 0E       		.uleb128 0xe
+ 722 000b 55       		.uleb128 0x55
+ 723 000c 17       		.uleb128 0x17
+ 724 000d 11       		.uleb128 0x11
+ 725 000e 01       		.uleb128 0x1
+ 726 000f 10       		.uleb128 0x10
+ 727 0010 17       		.uleb128 0x17
+ 728 0011 00       		.byte	0
+ 729 0012 00       		.byte	0
+ 730 0013 02       		.uleb128 0x2
+ 731 0014 24       		.uleb128 0x24
+ 732 0015 00       		.byte	0
+ 733 0016 0B       		.uleb128 0xb
+ 734 0017 0B       		.uleb128 0xb
+ 735 0018 3E       		.uleb128 0x3e
+ 736 0019 0B       		.uleb128 0xb
+ 737 001a 03       		.uleb128 0x3
+ 738 001b 0E       		.uleb128 0xe
+ 739 001c 00       		.byte	0
+ 740 001d 00       		.byte	0
+ 741 001e 03       		.uleb128 0x3
+ 742 001f 16       		.uleb128 0x16
+ 743 0020 00       		.byte	0
+ 744 0021 03       		.uleb128 0x3
+ 745 0022 0E       		.uleb128 0xe
+ 746 0023 3A       		.uleb128 0x3a
+ 747 0024 0B       		.uleb128 0xb
+ 748 0025 3B       		.uleb128 0x3b
+ 749 0026 0B       		.uleb128 0xb
+ 750 0027 49       		.uleb128 0x49
+ 751 0028 13       		.uleb128 0x13
+ 752 0029 00       		.byte	0
+ 753 002a 00       		.byte	0
+ 754 002b 04       		.uleb128 0x4
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 15
+
+
+ 755 002c 24       		.uleb128 0x24
+ 756 002d 00       		.byte	0
+ 757 002e 0B       		.uleb128 0xb
+ 758 002f 0B       		.uleb128 0xb
+ 759 0030 3E       		.uleb128 0x3e
+ 760 0031 0B       		.uleb128 0xb
+ 761 0032 03       		.uleb128 0x3
+ 762 0033 08       		.uleb128 0x8
+ 763 0034 00       		.byte	0
+ 764 0035 00       		.byte	0
+ 765 0036 05       		.uleb128 0x5
+ 766 0037 2E       		.uleb128 0x2e
+ 767 0038 01       		.byte	0x1
+ 768 0039 3F       		.uleb128 0x3f
+ 769 003a 19       		.uleb128 0x19
+ 770 003b 03       		.uleb128 0x3
+ 771 003c 0E       		.uleb128 0xe
+ 772 003d 3A       		.uleb128 0x3a
+ 773 003e 0B       		.uleb128 0xb
+ 774 003f 3B       		.uleb128 0x3b
+ 775 0040 0B       		.uleb128 0xb
+ 776 0041 27       		.uleb128 0x27
+ 777 0042 19       		.uleb128 0x19
+ 778 0043 11       		.uleb128 0x11
+ 779 0044 01       		.uleb128 0x1
+ 780 0045 12       		.uleb128 0x12
+ 781 0046 06       		.uleb128 0x6
+ 782 0047 40       		.uleb128 0x40
+ 783 0048 18       		.uleb128 0x18
+ 784 0049 9742     		.uleb128 0x2117
+ 785 004b 19       		.uleb128 0x19
+ 786 004c 01       		.uleb128 0x1
+ 787 004d 13       		.uleb128 0x13
+ 788 004e 00       		.byte	0
+ 789 004f 00       		.byte	0
+ 790 0050 06       		.uleb128 0x6
+ 791 0051 05       		.uleb128 0x5
+ 792 0052 00       		.byte	0
+ 793 0053 03       		.uleb128 0x3
+ 794 0054 0E       		.uleb128 0xe
+ 795 0055 3A       		.uleb128 0x3a
+ 796 0056 0B       		.uleb128 0xb
+ 797 0057 3B       		.uleb128 0x3b
+ 798 0058 0B       		.uleb128 0xb
+ 799 0059 49       		.uleb128 0x49
+ 800 005a 13       		.uleb128 0x13
+ 801 005b 02       		.uleb128 0x2
+ 802 005c 17       		.uleb128 0x17
+ 803 005d 00       		.byte	0
+ 804 005e 00       		.byte	0
+ 805 005f 07       		.uleb128 0x7
+ 806 0060 898201   		.uleb128 0x4109
+ 807 0063 01       		.byte	0x1
+ 808 0064 11       		.uleb128 0x11
+ 809 0065 01       		.uleb128 0x1
+ 810 0066 31       		.uleb128 0x31
+ 811 0067 13       		.uleb128 0x13
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 16
+
+
+ 812 0068 01       		.uleb128 0x1
+ 813 0069 13       		.uleb128 0x13
+ 814 006a 00       		.byte	0
+ 815 006b 00       		.byte	0
+ 816 006c 08       		.uleb128 0x8
+ 817 006d 8A8201   		.uleb128 0x410a
+ 818 0070 00       		.byte	0
+ 819 0071 02       		.uleb128 0x2
+ 820 0072 18       		.uleb128 0x18
+ 821 0073 9142     		.uleb128 0x2111
+ 822 0075 18       		.uleb128 0x18
+ 823 0076 00       		.byte	0
+ 824 0077 00       		.byte	0
+ 825 0078 09       		.uleb128 0x9
+ 826 0079 898201   		.uleb128 0x4109
+ 827 007c 01       		.byte	0x1
+ 828 007d 11       		.uleb128 0x11
+ 829 007e 01       		.uleb128 0x1
+ 830 007f 31       		.uleb128 0x31
+ 831 0080 13       		.uleb128 0x13
+ 832 0081 00       		.byte	0
+ 833 0082 00       		.byte	0
+ 834 0083 0A       		.uleb128 0xa
+ 835 0084 2E       		.uleb128 0x2e
+ 836 0085 01       		.byte	0x1
+ 837 0086 3F       		.uleb128 0x3f
+ 838 0087 19       		.uleb128 0x19
+ 839 0088 03       		.uleb128 0x3
+ 840 0089 0E       		.uleb128 0xe
+ 841 008a 3A       		.uleb128 0x3a
+ 842 008b 0B       		.uleb128 0xb
+ 843 008c 3B       		.uleb128 0x3b
+ 844 008d 0B       		.uleb128 0xb
+ 845 008e 27       		.uleb128 0x27
+ 846 008f 19       		.uleb128 0x19
+ 847 0090 49       		.uleb128 0x49
+ 848 0091 13       		.uleb128 0x13
+ 849 0092 8701     		.uleb128 0x87
+ 850 0094 19       		.uleb128 0x19
+ 851 0095 11       		.uleb128 0x11
+ 852 0096 01       		.uleb128 0x1
+ 853 0097 12       		.uleb128 0x12
+ 854 0098 06       		.uleb128 0x6
+ 855 0099 40       		.uleb128 0x40
+ 856 009a 18       		.uleb128 0x18
+ 857 009b 9742     		.uleb128 0x2117
+ 858 009d 19       		.uleb128 0x19
+ 859 009e 01       		.uleb128 0x1
+ 860 009f 13       		.uleb128 0x13
+ 861 00a0 00       		.byte	0
+ 862 00a1 00       		.byte	0
+ 863 00a2 0B       		.uleb128 0xb
+ 864 00a3 0B       		.uleb128 0xb
+ 865 00a4 01       		.byte	0x1
+ 866 00a5 11       		.uleb128 0x11
+ 867 00a6 01       		.uleb128 0x1
+ 868 00a7 12       		.uleb128 0x12
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 17
+
+
+ 869 00a8 06       		.uleb128 0x6
+ 870 00a9 00       		.byte	0
+ 871 00aa 00       		.byte	0
+ 872 00ab 0C       		.uleb128 0xc
+ 873 00ac 34       		.uleb128 0x34
+ 874 00ad 00       		.byte	0
+ 875 00ae 03       		.uleb128 0x3
+ 876 00af 0E       		.uleb128 0xe
+ 877 00b0 3A       		.uleb128 0x3a
+ 878 00b1 0B       		.uleb128 0xb
+ 879 00b2 3B       		.uleb128 0x3b
+ 880 00b3 0B       		.uleb128 0xb
+ 881 00b4 49       		.uleb128 0x49
+ 882 00b5 13       		.uleb128 0x13
+ 883 00b6 02       		.uleb128 0x2
+ 884 00b7 18       		.uleb128 0x18
+ 885 00b8 00       		.byte	0
+ 886 00b9 00       		.byte	0
+ 887 00ba 0D       		.uleb128 0xd
+ 888 00bb 34       		.uleb128 0x34
+ 889 00bc 00       		.byte	0
+ 890 00bd 03       		.uleb128 0x3
+ 891 00be 0E       		.uleb128 0xe
+ 892 00bf 3A       		.uleb128 0x3a
+ 893 00c0 0B       		.uleb128 0xb
+ 894 00c1 3B       		.uleb128 0x3b
+ 895 00c2 0B       		.uleb128 0xb
+ 896 00c3 49       		.uleb128 0x49
+ 897 00c4 13       		.uleb128 0x13
+ 898 00c5 02       		.uleb128 0x2
+ 899 00c6 17       		.uleb128 0x17
+ 900 00c7 00       		.byte	0
+ 901 00c8 00       		.byte	0
+ 902 00c9 0E       		.uleb128 0xe
+ 903 00ca 898201   		.uleb128 0x4109
+ 904 00cd 00       		.byte	0
+ 905 00ce 11       		.uleb128 0x11
+ 906 00cf 01       		.uleb128 0x1
+ 907 00d0 31       		.uleb128 0x31
+ 908 00d1 13       		.uleb128 0x13
+ 909 00d2 00       		.byte	0
+ 910 00d3 00       		.byte	0
+ 911 00d4 0F       		.uleb128 0xf
+ 912 00d5 34       		.uleb128 0x34
+ 913 00d6 00       		.byte	0
+ 914 00d7 03       		.uleb128 0x3
+ 915 00d8 0E       		.uleb128 0xe
+ 916 00d9 3A       		.uleb128 0x3a
+ 917 00da 0B       		.uleb128 0xb
+ 918 00db 3B       		.uleb128 0x3b
+ 919 00dc 05       		.uleb128 0x5
+ 920 00dd 49       		.uleb128 0x49
+ 921 00de 13       		.uleb128 0x13
+ 922 00df 3F       		.uleb128 0x3f
+ 923 00e0 19       		.uleb128 0x19
+ 924 00e1 3C       		.uleb128 0x3c
+ 925 00e2 19       		.uleb128 0x19
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 18
+
+
+ 926 00e3 00       		.byte	0
+ 927 00e4 00       		.byte	0
+ 928 00e5 10       		.uleb128 0x10
+ 929 00e6 35       		.uleb128 0x35
+ 930 00e7 00       		.byte	0
+ 931 00e8 49       		.uleb128 0x49
+ 932 00e9 13       		.uleb128 0x13
+ 933 00ea 00       		.byte	0
+ 934 00eb 00       		.byte	0
+ 935 00ec 11       		.uleb128 0x11
+ 936 00ed 2E       		.uleb128 0x2e
+ 937 00ee 00       		.byte	0
+ 938 00ef 3F       		.uleb128 0x3f
+ 939 00f0 19       		.uleb128 0x19
+ 940 00f1 3C       		.uleb128 0x3c
+ 941 00f2 19       		.uleb128 0x19
+ 942 00f3 6E       		.uleb128 0x6e
+ 943 00f4 0E       		.uleb128 0xe
+ 944 00f5 03       		.uleb128 0x3
+ 945 00f6 0E       		.uleb128 0xe
+ 946 00f7 3A       		.uleb128 0x3a
+ 947 00f8 0B       		.uleb128 0xb
+ 948 00f9 3B       		.uleb128 0x3b
+ 949 00fa 0B       		.uleb128 0xb
+ 950 00fb 00       		.byte	0
+ 951 00fc 00       		.byte	0
+ 952 00fd 00       		.byte	0
+ 953              		.section	.debug_loc,"",%progbits
+ 954              	.Ldebug_loc0:
+ 955              	.LLST0:
+ 956 0000 00000000 		.4byte	.LVL0
+ 957 0004 08000000 		.4byte	.LVL1
+ 958 0008 0100     		.2byte	0x1
+ 959 000a 50       		.byte	0x50
+ 960 000b 08000000 		.4byte	.LVL1
+ 961 000f 36000000 		.4byte	.LFE63
+ 962 0013 0400     		.2byte	0x4
+ 963 0015 F3       		.byte	0xf3
+ 964 0016 01       		.uleb128 0x1
+ 965 0017 50       		.byte	0x50
+ 966 0018 9F       		.byte	0x9f
+ 967 0019 00000000 		.4byte	0
+ 968 001d 00000000 		.4byte	0
+ 969              	.LLST1:
+ 970 0021 1C000000 		.4byte	.LVL15
+ 971 0025 28000000 		.4byte	.LVL16
+ 972 0029 0100     		.2byte	0x1
+ 973 002b 50       		.byte	0x50
+ 974 002c 00000000 		.4byte	0
+ 975 0030 00000000 		.4byte	0
+ 976              		.section	.debug_aranges,"",%progbits
+ 977 0000 24000000 		.4byte	0x24
+ 978 0004 0200     		.2byte	0x2
+ 979 0006 00000000 		.4byte	.Ldebug_info0
+ 980 000a 04       		.byte	0x4
+ 981 000b 00       		.byte	0
+ 982 000c 0000     		.2byte	0
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 19
+
+
+ 983 000e 0000     		.2byte	0
+ 984 0010 00000000 		.4byte	.LFB63
+ 985 0014 36000000 		.4byte	.LFE63-.LFB63
+ 986 0018 00000000 		.4byte	.LFB64
+ 987 001c BC000000 		.4byte	.LFE64-.LFB64
+ 988 0020 00000000 		.4byte	0
+ 989 0024 00000000 		.4byte	0
+ 990              		.section	.debug_ranges,"",%progbits
+ 991              	.Ldebug_ranges0:
+ 992 0000 00000000 		.4byte	.LFB63
+ 993 0004 36000000 		.4byte	.LFE63
+ 994 0008 00000000 		.4byte	.LFB64
+ 995 000c BC000000 		.4byte	.LFE64
+ 996 0010 00000000 		.4byte	0
+ 997 0014 00000000 		.4byte	0
+ 998              		.section	.debug_line,"",%progbits
+ 999              	.Ldebug_line0:
+ 1000 0000 D4020000 		.section	.debug_str,"MS",%progbits,1
+ 1000      0200CE01 
+ 1000      00000201 
+ 1000      FB0E0D00 
+ 1000      01010101 
+ 1001              	.LASF4:
+ 1002 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1002      6E74385F 
+ 1002      7400
+ 1003              	.LASF35:
+ 1004 000a 77726974 		.ascii	"writeToFETs\000"
+ 1004      65546F46 
+ 1004      45547300 
+ 1005              	.LASF29:
+ 1006 0016 4C454654 		.ascii	"LEFT_HALL_A_Read\000"
+ 1006      5F48414C 
+ 1006      4C5F415F 
+ 1006      52656164 
+ 1006      00
+ 1007              	.LASF5:
+ 1008 0027 5F5F696E 		.ascii	"__int32_t\000"
+ 1008      7433325F 
+ 1008      7400
+ 1009              	.LASF18:
+ 1010 0031 6C656674 		.ascii	"left_direction\000"
+ 1010      5F646972 
+ 1010      65637469 
+ 1010      6F6E00
+ 1011              	.LASF22:
+ 1012 0040 4C454654 		.ascii	"LEFT_HA_Write\000"
+ 1012      5F48415F 
+ 1012      57726974 
+ 1012      6500
+ 1013              	.LASF10:
+ 1014 004e 756E7369 		.ascii	"unsigned int\000"
+ 1014      676E6564 
+ 1014      20696E74 
+ 1014      00
+ 1015              	.LASF14:
+ 1016 005b 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 20
+
+
+ 1016      6C6500
+ 1017              	.LASF36:
+ 1018 0062 73746174 		.ascii	"status\000"
+ 1018      757300
+ 1019              	.LASF12:
+ 1020 0069 696E7433 		.ascii	"int32_t\000"
+ 1020      325F7400 
+ 1021              	.LASF28:
+ 1022 0071 4C454654 		.ascii	"LEFT_DIR_Read\000"
+ 1022      5F444952 
+ 1022      5F526561 
+ 1022      6400
+ 1023              	.LASF24:
+ 1024 007f 4C454654 		.ascii	"LEFT_HB_Write\000"
+ 1024      5F48425F 
+ 1024      57726974 
+ 1024      6500
+ 1025              	.LASF13:
+ 1026 008d 666C6F61 		.ascii	"float\000"
+ 1026      7400
+ 1027              	.LASF1:
+ 1028 0093 756E7369 		.ascii	"unsigned char\000"
+ 1028      676E6564 
+ 1028      20636861 
+ 1028      7200
+ 1029              	.LASF32:
+ 1030 00a1 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1030      43313120 
+ 1030      352E342E 
+ 1030      31203230 
+ 1030      31363036 
+ 1031 00d4 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1031      20726576 
+ 1031      6973696F 
+ 1031      6E203233 
+ 1031      37373135 
+ 1032 0107 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1032      66756E63 
+ 1032      74696F6E 
+ 1032      2D736563 
+ 1032      74696F6E 
+ 1033              	.LASF30:
+ 1034 012f 4C454654 		.ascii	"LEFT_HALL_B_Read\000"
+ 1034      5F48414C 
+ 1034      4C5F425F 
+ 1034      52656164 
+ 1034      00
+ 1035              	.LASF26:
+ 1036 0140 4C454654 		.ascii	"LEFT_HC_Write\000"
+ 1036      5F48435F 
+ 1036      57726974 
+ 1036      6500
+ 1037              	.LASF3:
+ 1038 014e 73686F72 		.ascii	"short unsigned int\000"
+ 1038      7420756E 
+ 1038      7369676E 
+ 1038      65642069 
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 21
+
+
+ 1038      6E7400
+ 1039              	.LASF38:
+ 1040 0161 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1040      52784275 
+ 1040      66666572 
+ 1040      00
+ 1041              	.LASF7:
+ 1042 016e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1042      20756E73 
+ 1042      69676E65 
+ 1042      6420696E 
+ 1042      7400
+ 1043              	.LASF23:
+ 1044 0180 4C454654 		.ascii	"LEFT_LA_Write\000"
+ 1044      5F4C415F 
+ 1044      57726974 
+ 1044      6500
+ 1045              	.LASF2:
+ 1046 018e 73686F72 		.ascii	"short int\000"
+ 1046      7420696E 
+ 1046      7400
+ 1047              	.LASF37:
+ 1048 0198 6D61696E 		.ascii	"main\000"
+ 1048      00
+ 1049              	.LASF34:
+ 1050 019d 433A5C55 		.ascii	"C:\\Users\\Fischer\\Documents\\GitHub\\kanzi\\PSoC\\"
+ 1050      73657273 
+ 1050      5C466973 
+ 1050      63686572 
+ 1050      5C446F63 
+ 1051 01ca 576F726B 		.ascii	"Workspace01\\svm_software.cydsn\000"
+ 1051      73706163 
+ 1051      6530315C 
+ 1051      73766D5F 
+ 1051      736F6674 
+ 1052              	.LASF25:
+ 1053 01e9 4C454654 		.ascii	"LEFT_LB_Write\000"
+ 1053      5F4C425F 
+ 1053      57726974 
+ 1053      6500
+ 1054              	.LASF9:
+ 1055 01f7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1055      206C6F6E 
+ 1055      6720756E 
+ 1055      7369676E 
+ 1055      65642069 
+ 1056              	.LASF11:
+ 1057 020e 75696E74 		.ascii	"uint8_t\000"
+ 1057      385F7400 
+ 1058              	.LASF27:
+ 1059 0216 4C454654 		.ascii	"LEFT_LC_Write\000"
+ 1059      5F4C435F 
+ 1059      57726974 
+ 1059      6500
+ 1060              	.LASF31:
+ 1061 0224 4C454654 		.ascii	"LEFT_HALL_C_Read\000"
+ 1061      5F48414C 
+ARM GAS  C:\Users\Fischer\AppData\Local\Temp\ccfAOyXX.s 			page 22
+
+
+ 1061      4C5F435F 
+ 1061      52656164 
+ 1061      00
+ 1062              	.LASF17:
+ 1063 0235 73697A65 		.ascii	"sizetype\000"
+ 1063      74797065 
+ 1063      00
+ 1064              	.LASF8:
+ 1065 023e 6C6F6E67 		.ascii	"long long int\000"
+ 1065      206C6F6E 
+ 1065      6720696E 
+ 1065      7400
+ 1066              	.LASF33:
+ 1067 024c 6D61696E 		.ascii	"main.c\000"
+ 1067      2E6300
+ 1068              	.LASF15:
+ 1069 0253 63686172 		.ascii	"char\000"
+ 1069      00
+ 1070              	.LASF19:
+ 1071 0258 6C656674 		.ascii	"left_hall_a\000"
+ 1071      5F68616C 
+ 1071      6C5F6100 
+ 1072              	.LASF20:
+ 1073 0264 6C656674 		.ascii	"left_hall_b\000"
+ 1073      5F68616C 
+ 1073      6C5F6200 
+ 1074              	.LASF21:
+ 1075 0270 6C656674 		.ascii	"left_hall_c\000"
+ 1075      5F68616C 
+ 1075      6C5F6300 
+ 1076              	.LASF6:
+ 1077 027c 6C6F6E67 		.ascii	"long int\000"
+ 1077      20696E74 
+ 1077      00
+ 1078              	.LASF16:
+ 1079 0285 6C6F6E67 		.ascii	"long double\000"
+ 1079      20646F75 
+ 1079      626C6500 
+ 1080              	.LASF0:
+ 1081 0291 7369676E 		.ascii	"signed char\000"
+ 1081      65642063 
+ 1081      68617200 
+ 1082              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

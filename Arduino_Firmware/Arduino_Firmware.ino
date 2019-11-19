@@ -19,6 +19,7 @@ and Physics. Feel free to use it as you wish, but do tell me if you do something
 cool with it!
 */
 
+
 #include <PID_v1.h>
 #include <Wire.h>
 #include "SparkFun_BNO080_Arduino_Library.h"
@@ -36,7 +37,7 @@ stateVector controlVector;
 
 struct Motor {
   //configuration
-  uint8_t stopThresholdTime = 10; //the amount of time (in ms) that has to pass where the hall effect sensors don't change to be considered "stopped"
+  uint8_t stopThresholdTime = 12 ; //the amount of time (in ms) that has to pass where the hall effect sensors don't change to be considered "stopped"
   const int16_t MIN_MOTOR_OUTPUT = -255;
   const uint8_t MAX_MOTOR_OUTPUT = 255;
 
@@ -90,20 +91,24 @@ struct Motor {
 
       //the motor could be stopped, but we need to wait longer
       //leave both lastHallState and lastHallChange alone, because we'll want to check those later
+      //return false, just to be safe
+      return false;
     }
 
-    //the hall positions have changed, so the motor must be turning
-    //the last state of the hall effect sensors is no longer valid, so update both it and when it was last changed
-    lastHallState = currentState;
-    lastHallChange = millis();
-    
-    return false;
+    else {
+      //the hall positions have changed, so the motor must be turning
+      //the last state of the hall effect sensors is no longer valid, so update both it and when it was last changed
+      lastHallState = currentState;
+      lastHallChange = millis();
+      return false;
+    }
   }
+
 
   //updates IO, pushes motor state
   bool update(double new_pwm){
     //cast the left and right motor controls to int16_t, as they are stored as doubles (required by PID library :/)
-    uint16_t pwm = static_cast<int16_t>(new_pwm);
+    int16_t pwm = static_cast<int16_t>(new_pwm);
 
     //if the new PWM command is outside the allowable range, don't do anything and return with error
     if(pwm > MAX_MOTOR_OUTPUT || pwm < MIN_MOTOR_OUTPUT) return 1;
@@ -125,12 +130,12 @@ struct Motor {
 #define RIGHT_MOTOR_DIR 8
 
 //IO pins to use for interfacing with the hall effect sensors
-#define LEFT_HALL_A 1
-#define LEFT_HALL_B 1
-#define LEFT_HALL_C 1
-#define RIGHT_HALL_A 1
-#define RIGHT_HALL_B 1
-#define RIGHT_HALL_C 1
+#define LEFT_HALL_A 2
+#define LEFT_HALL_B 3
+#define LEFT_HALL_C 4
+#define RIGHT_HALL_A 10
+#define RIGHT_HALL_B 11
+#define RIGHT_HALL_C 12
 
 //Motor configuration
 Motor leftMotor, rightMotor;
@@ -213,11 +218,17 @@ void setup() {
 }
 
 void loop() {
-  updateRotationVector(&rotationVector); //get new rotation vector data
+  //updateRotationVector(&rotationVector); //get new rotation vector data
 
-  leftPID.Compute(); //recompute motor PIDs
-  rightPID.Compute();
+  //leftPID.Compute(); //recompute motor PIDs
+  //rightPID.Compute();
 
-  printStateVector(&controlVector);
-  Serial.println(leftMotor.isStopped());
+  //printStateVector(&controlVector)
+  leftMotor.update(255);
+  delay(5000);
+  //leftMotor.update(0);
+  //while(!leftMotor.isStopped()); //wait for motor to be fully stopped
+  leftMotor.update(-255);
+  delay(5000);
+  while(1);
 }
