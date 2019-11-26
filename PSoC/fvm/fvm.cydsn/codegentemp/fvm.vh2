@@ -2,7 +2,7 @@
 --	Conversion of fvm.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Nov 18 16:05:39 2019
+--	Mon Nov 25 02:39:26 2019
 --
 
 USE cypress.cypress.all;
@@ -76,8 +76,8 @@ SIGNAL \COMMUTATION_LUT1:tmp__COMMUTATION_LUT1_reg_3\ : bit;
 SIGNAL \COMMUTATION_LUT1:tmp__COMMUTATION_LUT1_reg_2\ : bit;
 SIGNAL \COMMUTATION_LUT1:tmp__COMMUTATION_LUT1_reg_1\ : bit;
 SIGNAL \COMMUTATION_LUT1:tmp__COMMUTATION_LUT1_reg_0\ : bit;
-SIGNAL Net_218 : bit;
-SIGNAL Net_216 : bit;
+SIGNAL Net_246 : bit;
+SIGNAL Net_244 : bit;
 SIGNAL Net_162 : bit;
 SIGNAL Net_163 : bit;
 SIGNAL tmpOE__HALL_A1_net_0 : bit;
@@ -154,14 +154,14 @@ SIGNAL \COMMUTATION_LUT2:tmp__COMMUTATION_LUT2_reg_3\ : bit;
 SIGNAL \COMMUTATION_LUT2:tmp__COMMUTATION_LUT2_reg_2\ : bit;
 SIGNAL \COMMUTATION_LUT2:tmp__COMMUTATION_LUT2_reg_1\ : bit;
 SIGNAL \COMMUTATION_LUT2:tmp__COMMUTATION_LUT2_reg_0\ : bit;
-SIGNAL Net_209 : bit;
+SIGNAL Net_251 : bit;
 SIGNAL Net_208 : bit;
 SIGNAL Net_207 : bit;
 SIGNAL Net_206 : bit;
 SIGNAL Net_205 : bit;
 SIGNAL Net_204 : bit;
 SIGNAL Net_203 : bit;
-SIGNAL Net_199 : bit;
+SIGNAL Net_249 : bit;
 SIGNAL Net_212 : bit;
 SIGNAL Net_213 : bit;
 SIGNAL Net_214 : bit;

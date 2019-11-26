@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="DirectHardware\DirectHardware\Source Files\main.c">
+<ExpandedNodeIds>
+<v>DirectHardware</v>
+<v>DirectHardware\DirectHardware</v>
+<v>DirectHardware\DirectHardware\TopDesign</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Pins</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Analog</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Clocks</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Interrupts</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\DMA</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\System</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Directives</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Flash Security</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\EEPROM</v>
+<v>DirectHardware\DirectHardware\Header Files</v>
+<v>DirectHardware\DirectHardware\Header Files\cyapicallbacks.h</v>
+<v>DirectHardware\DirectHardware\Source Files</v>
+<v>DirectHardware\DirectHardware\Source Files\main.c</v>
+<v>DirectHardware\DirectHardware\Generated_Source</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>DirectHardware</v>
+<v>DirectHardware\DirectHardware</v>
+<v>DirectHardware\DirectHardware\TopDesign</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Pins</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Analog</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Clocks</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Interrupts</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\DMA</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\System</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Directives</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\Flash Security</v>
+<v>DirectHardware\DirectHardware\DirectHardware.cydwr\EEPROM</v>
+<v>DirectHardware\DirectHardware\Header Files</v>
+<v>DirectHardware\DirectHardware\Header Files\cyapicallbacks.h</v>
+<v>DirectHardware\DirectHardware\Source Files</v>
+<v>DirectHardware\DirectHardware\Source Files\main.c</v>
+<v>DirectHardware\DirectHardware\Generated_Source</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\cy_boot</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\HA</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\HALL_A</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\HALL_B</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\HALL_C</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\HB</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\HC</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\LA</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\LB</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\LC</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\PWM</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\cydevice.h</v>
+<v>DirectHardware\DirectHardware\Generated_Source\PSoC5\cydevice_trm.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>DirectHardware</v>
+<v>DirectHardware\DirectHardware</v>
+<v>DirectHardware\DirectHardware\TopDesign</v>
+<v>DirectHardware\DirectHardware\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>DirectHardware</v>
+<v>DirectHardware\DirectHardware</v>
+<v>DirectHardware\DirectHardware\TopDesign</v>
+<v>DirectHardware\DirectHardware\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>DirectHardware</v>
+<v>DirectHardware\DirectHardware</v>
+<v>DirectHardware\DirectHardware\CortexM3</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HA.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_A.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_B.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_C.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HB.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HC.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\LA.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\LB.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\LC.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\DirectHardware.elf</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\DirectHardware.hex</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\DirectHardware.map</v>
+<v>DirectHardware\DirectHardware\DirectHardware.gpdsc</v>
+<v>DirectHardware\DirectHardware\DirectHardware.rpt</v>
+<v>DirectHardware\DirectHardware\DirectHardware_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>DirectHardware</v>
+<v>DirectHardware\DirectHardware</v>
+<v>DirectHardware\DirectHardware\CortexM3</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HA.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_A.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_B.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HALL_C.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HB.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\HC.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\LA.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\LB.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\LC.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\DirectHardware.elf</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\DirectHardware.hex</v>
+<v>DirectHardware\DirectHardware\CortexM3\ARM_GCC_541\Debug\DirectHardware.map</v>
+<v>DirectHardware\DirectHardware\DirectHardware.gpdsc</v>
+<v>DirectHardware\DirectHardware\DirectHardware.rpt</v>
+<v>DirectHardware\DirectHardware\DirectHardware_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>DirectHardware</v>
+<v>DirectHardware\DirectHardware</v>
+<v>DirectHardware\DirectHardware\PSoC 5LP Architecture TRM</v>
+<v>DirectHardware\DirectHardware\CY8C58LP Family Datasheet</v>
+<v>DirectHardware\DirectHardware\System Reference Guides</v>
+<v>DirectHardware\DirectHardware\System Reference Guides\cy_boot_v5_80</v>
+<v>DirectHardware\DirectHardware\and_v1_0</v>
+<v>DirectHardware\DirectHardware\and_v1_0\and_v1_0.pdf</v>
+<v>DirectHardware\DirectHardware\cy_pins_v2_20</v>
+<v>DirectHardware\DirectHardware\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>DirectHardware\DirectHardware\LUT_v1_60.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>DirectHardware</v>
+<v>DirectHardware\DirectHardware</v>
+<v>DirectHardware\DirectHardware\PSoC 5LP Architecture TRM</v>
+<v>DirectHardware\DirectHardware\CY8C58LP Family Datasheet</v>
+<v>DirectHardware\DirectHardware\System Reference Guides</v>
+<v>DirectHardware\DirectHardware\System Reference Guides\cy_boot_v5_80</v>
+<v>DirectHardware\DirectHardware\and_v1_0</v>
+<v>DirectHardware\DirectHardware\and_v1_0\and_v1_0.pdf</v>
+<v>DirectHardware\DirectHardware\cy_pins_v2_20</v>
+<v>DirectHardware\DirectHardware\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>DirectHardware\DirectHardware\LUT_v1_60.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\DirectHardware.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\DirectHardware.cydsn\DirectHardware.cydwr" />
+<name v=".\DirectHardware.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1078, 471" SelectedTabbedMdiWindow="c7b319a5-b392-4297-99b2-59f6794cded9"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0342a946-1eb3-434f-875b-37b9d2cd7c37" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\DirectHardware\DirectHardware.cydsn\TopDesign\TopDesign.cysch" Guid="c7b319a5-b392-4297-99b2-59f6794cded9" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\DirectHardware\DirectHardware.cydsn\DirectHardware.cydwr" Guid="dc531530-7416-42c1-95c8-2599703cefea" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\DirectHardware\DirectHardware.cydsn\main.c" Guid="53d3fc95-4f2e-4346-8bdd-b18914d2fe81" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

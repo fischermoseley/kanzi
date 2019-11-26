@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace01\svm_software\svm_software.cydwr\Pins">
 <ExpandedNodeIds>
 <v>Workspace01</v>
 <v>Workspace01\svm_software</v>
@@ -72,6 +72,8 @@
 <v>Workspace01\svm_software\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 <v>Workspace01\svm_software\Generated_Source\PSoC5\cydevice.h</v>
 <v>Workspace01\svm_software\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Workspace01\svm_software\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Workspace01\svm_software\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -206,7 +208,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1121, 471" SelectedTabbedMdiWindow="973f2008-bd1b-481f-a596-cb696ee8d7e8"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0342a946-1eb3-434f-875b-37b9d2cd7c37" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\Workspace01\svm_software.cydsn\TopDesign\TopDesign.cysch" Guid="ce0a4aab-5b03-4251-b075-3a80995707a3" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\Workspace01\svm_software.cydsn\svm_software.cydwr" Guid="4ba3d7da-8ca3-4443-9f56-864538b2907e" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\Workspace01\svm_software.cydsn\main.c" Guid="973f2008-bd1b-481f-a596-cb696ee8d7e8" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1396, 507" SelectedTabbedMdiWindow="4ba3d7da-8ca3-4443-9f56-864538b2907e"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="0342a946-1eb3-434f-875b-37b9d2cd7c37" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\Workspace01\svm_software.cydsn\TopDesign\TopDesign.cysch" Guid="ce0a4aab-5b03-4251-b075-3a80995707a3" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\Workspace01\svm_software.cydsn\svm_software.cydwr" Guid="4ba3d7da-8ca3-4443-9f56-864538b2907e" /><DocumentWindow Key="C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\Workspace01\svm_software.cydsn\main.c" Guid="973f2008-bd1b-481f-a596-cb696ee8d7e8" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

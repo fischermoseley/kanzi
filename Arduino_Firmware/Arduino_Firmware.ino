@@ -71,6 +71,17 @@ struct Motor {
     
     pinMode(PWM_PIN, OUTPUT);
     pinMode(DIR_PIN, OUTPUT);
+
+    //for some reason, the PSoC is weird and won't self-start unless there's some I/O change
+    //I think this is because the lookup table doesn't always reinitialize to some known value,
+    //so by pulsing the direction pin at startup, we can make sure the lookup table is in a known config.
+
+    analogWrite(PWM_PIN, 0); //make sure the motor speed is off
+    digitalWrite(DIR_PIN, FORWARD); //pulse the direction pin
+    delay(100);
+    digitalWrite(DIR_PIN, REVERSE);
+    delay(100);
+    digitalWrite(DIR_PIN, FORWARD);
   }
 
   //returns true if the motor's hall effect sensors haven't changed in the last 10ms, false otherwise
@@ -103,7 +114,6 @@ struct Motor {
       return false;
     }
   }
-
 
   //updates IO, pushes motor state
   bool update(double new_pwm){
@@ -147,9 +157,9 @@ struct PIDconfigContainer {
   double yawSetpoint = 0;
   double pitchSetpoint = 0;
   double rollSetpoint = 90;
-  double K_p = 10;
-  double K_i = 0;
-  double K_d = 0;
+  double K_p = 8;
+  double K_i = 1.5;
+  double K_d = 0.3;
 } PIDconfig;
 
 //Specify links and initial tuning parameters
@@ -218,17 +228,12 @@ void setup() {
 }
 
 void loop() {
-  //updateRotationVector(&rotationVector); //get new rotation vector data
-
-  //leftPID.Compute(); //recompute motor PIDs
-  //rightPID.Compute();
-
-  //printStateVector(&controlVector)
-  leftMotor.update(255);
-  delay(5000);
-  //leftMotor.update(0);
-  //while(!leftMotor.isStopped()); //wait for motor to be fully stopped
-  leftMotor.update(-255);
-  delay(5000);
-  while(1);
+  updateRotationVector(&rotationVector); //get new rotation vector data
+  leftPID.Compute(); //recompute motor PIDs
+  rightPID.Compute();
+  leftMotor.update(controlVector.left_motor);
+  rightMotor.update(controlVector.right_motor);
+  Serial.print("pitch: ");
+  Serial.println(rotationVector.pitch);
+  printStateVector(&controlVector);
 }

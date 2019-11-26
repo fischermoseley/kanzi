@@ -779,6 +779,10 @@
 <v>Cypress Component Catalog\Ports and Pins</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>Cypress Component Catalog</v>
+<v>Cypress Component Catalog\Analog</v>
+<v>Cypress Component Catalog\CapSense</v>
+<v>Cypress Component Catalog\Communications</v>
 <v>Cypress Component Catalog\Digital</v>
 <v>Cypress Component Catalog\Display</v>
 <v>Cypress Component Catalog\Display\4 Digit 7-Segment LED Driver [v1.10]</v>
@@ -825,9 +829,279 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="132185847774247602" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" v="132191411760807689" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
+</dataGuid>
+<dataGuid v="925cc1e1-309e-4e08-b0a1-09a83c35b157">
+<CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtProjectPSoCExe+CyCodeGenDepUserInfo" version="1">
+<deps_list>
+<v>.\TopDesign\TopDesign.cysch</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\nand_v1_0\nand_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\nand_v1_0\nand_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\nand_v1_0\nand_v1_0.v</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\nand_v1_0\version.cypatch</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\nand_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\version.cypatch</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.cysym</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.cystate</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.cyprimitive</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\version.cypatch</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyenums.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cypinsdata.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cypinpicture.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cypinutils.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cygeneralcontrol.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cygeneralcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyinputcontrol.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyinputcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cymappingcontrol.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cymappingcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyoutputcontrol.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyoutputcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cypinaliasdialog.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cypinaliasdialog.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cypinscontrol.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cypinscontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyporcontrol.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyporcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\Resource1.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyclockingcontrol.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyclockingcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cygeneralcontrol.resx</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyinputcontrol.resx</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cymappingcontrol.resx</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyoutputcontrol.resx</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cypinaliasdialog.resx</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cypinscontrol.resx</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyporcontrol.resx</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\Resource1.resx</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\Custom\cyclockingcontrol.resx</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\PSoC5\API\aliases.h</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\PSoC5\API\pins.c</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\cy_pins_v2_20\PSoC5\API\pins.h</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\xor_v1_0\xor_v1_0.cysym</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\xor_v1_0\xor_v1_0.pdf</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\xor_v1_0\xor_v1_0.v</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\xor_v1_0\version.cypatch</v>
+<v>${CyRoot}\psoc\content\CyPrimitives\cyprimitives.cylib\xor_v1_0\Custom\custom.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\LUT_v1_60.cysym</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\LUT_v1_60.pdf</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\LUT_v1_60.v</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\LUT_v1_60.cystate</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cybitfieldcontrol.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cybitfieldcontrol.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cylutcustomizer.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cyvb.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cyparameters.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cytabbase.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cyutils.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\ResourceMsg.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cyrenamedialog.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cyrenamedialog.Designer.cs</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cybitfieldcontrol.resx</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\ResourceMsg.resx</v>
+<v>${CyRoot}\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_60\Custom\cyrenamedialog.resx</v>
+<v>.\fvm.cydwr</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\Em_EEPROM_Dynamic_v2_20\API\cy_em_eeprom.c</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\Em_EEPROM_Dynamic_v2_20\API\cy_em_eeprom.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\cm3gcc.ld</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\Cm3RealView.scat</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\Cm3Start.c</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\core_cm3.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\core_cm3_psoc5.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CyBootAsmGnu.s</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CyBootAsmRv.s</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CyDmac.c</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CyDmac.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CyFlash.c</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CyFlash.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CyLib.c</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CyLib.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\cypins.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\cyPm.c</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\cyPm.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CySpc.c</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CySpc.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\cytypes.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\cyutils.c</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\core_cmFunc.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\core_cmInstr.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\Cm3Iar.icf</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\CyBootAsmIar.s</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\cmsis_armcc.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\cmsis_gcc.h</v>
+<v>..\..\..\..\..\PSoC Creator\4.2\Downloads ( 4.2).cylib\cy_boot_v5_80\PSoC5\API\cmsis_compiler.h</v>
+</deps_list>
+<gen_list>
+<v>Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>Generated_Source\PSoC5\config.hex</v>
+<v>Generated_Source\PSoC5\cymetadata.c</v>
+<v>Generated_Source\PSoC5\cydevice.h</v>
+<v>Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>Generated_Source\PSoC5\cyfitter.h</v>
+<v>Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Generated_Source\PSoC5\HA_aliases.h</v>
+<v>Generated_Source\PSoC5\HA.c</v>
+<v>Generated_Source\PSoC5\HA.h</v>
+<v>Generated_Source\PSoC5\HB_aliases.h</v>
+<v>Generated_Source\PSoC5\HB.c</v>
+<v>Generated_Source\PSoC5\HB.h</v>
+<v>Generated_Source\PSoC5\HC_aliases.h</v>
+<v>Generated_Source\PSoC5\HC.c</v>
+<v>Generated_Source\PSoC5\HC.h</v>
+<v>Generated_Source\PSoC5\LA_aliases.h</v>
+<v>Generated_Source\PSoC5\LA.c</v>
+<v>Generated_Source\PSoC5\LA.h</v>
+<v>Generated_Source\PSoC5\LB_aliases.h</v>
+<v>Generated_Source\PSoC5\LB.c</v>
+<v>Generated_Source\PSoC5\LB.h</v>
+<v>Generated_Source\PSoC5\LC_aliases.h</v>
+<v>Generated_Source\PSoC5\LC.c</v>
+<v>Generated_Source\PSoC5\LC.h</v>
+<v>Generated_Source\PSoC5\HALL_A_aliases.h</v>
+<v>Generated_Source\PSoC5\HALL_A.c</v>
+<v>Generated_Source\PSoC5\HALL_A.h</v>
+<v>Generated_Source\PSoC5\HALL_B_aliases.h</v>
+<v>Generated_Source\PSoC5\HALL_B.c</v>
+<v>Generated_Source\PSoC5\HALL_B.h</v>
+<v>Generated_Source\PSoC5\HALL_C_aliases.h</v>
+<v>Generated_Source\PSoC5\HALL_C.c</v>
+<v>Generated_Source\PSoC5\HALL_C.h</v>
+<v>Generated_Source\PSoC5\REVERSE_aliases.h</v>
+<v>Generated_Source\PSoC5\REVERSE.c</v>
+<v>Generated_Source\PSoC5\REVERSE.h</v>
+<v>Generated_Source\PSoC5\cy_em_eeprom.c</v>
+<v>Generated_Source\PSoC5\cy_em_eeprom.h</v>
+<v>Generated_Source\PSoC5\cm3gcc.ld</v>
+<v>Generated_Source\PSoC5\Cm3RealView.scat</v>
+<v>Generated_Source\PSoC5\Cm3Start.c</v>
+<v>Generated_Source\PSoC5\core_cm3.h</v>
+<v>Generated_Source\PSoC5\core_cm3_psoc5.h</v>
+<v>Generated_Source\PSoC5\CyBootAsmGnu.s</v>
+<v>Generated_Source\PSoC5\CyBootAsmRv.s</v>
+<v>Generated_Source\PSoC5\CyDmac.c</v>
+<v>Generated_Source\PSoC5\CyDmac.h</v>
+<v>Generated_Source\PSoC5\CyFlash.c</v>
+<v>Generated_Source\PSoC5\CyFlash.h</v>
+<v>Generated_Source\PSoC5\CyLib.c</v>
+<v>Generated_Source\PSoC5\CyLib.h</v>
+<v>Generated_Source\PSoC5\cypins.h</v>
+<v>Generated_Source\PSoC5\cyPm.c</v>
+<v>Generated_Source\PSoC5\cyPm.h</v>
+<v>Generated_Source\PSoC5\CySpc.c</v>
+<v>Generated_Source\PSoC5\CySpc.h</v>
+<v>Generated_Source\PSoC5\cytypes.h</v>
+<v>Generated_Source\PSoC5\cyutils.c</v>
+<v>Generated_Source\PSoC5\core_cmFunc.h</v>
+<v>Generated_Source\PSoC5\core_cmInstr.h</v>
+<v>Generated_Source\PSoC5\Cm3Iar.icf</v>
+<v>Generated_Source\PSoC5\CyBootAsmIar.s</v>
+<v>Generated_Source\PSoC5\cmsis_armcc.h</v>
+<v>Generated_Source\PSoC5\cmsis_gcc.h</v>
+<v>Generated_Source\PSoC5\cmsis_compiler.h</v>
+<v>Generated_Source\PSoC5\project.h</v>
+<v>Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Generated_Source\PSoC5\Pin_1_aliases.h</v>
+<v>Generated_Source\PSoC5\Pin_1.c</v>
+<v>Generated_Source\PSoC5\Pin_1.h</v>
+<v>Generated_Source\PSoC5\HA1_aliases.h</v>
+<v>Generated_Source\PSoC5\HA1.c</v>
+<v>Generated_Source\PSoC5\HA1.h</v>
+<v>Generated_Source\PSoC5\HB1_aliases.h</v>
+<v>Generated_Source\PSoC5\HB1.c</v>
+<v>Generated_Source\PSoC5\HB1.h</v>
+<v>Generated_Source\PSoC5\HC1_aliases.h</v>
+<v>Generated_Source\PSoC5\HC1.c</v>
+<v>Generated_Source\PSoC5\HC1.h</v>
+<v>Generated_Source\PSoC5\LA1_aliases.h</v>
+<v>Generated_Source\PSoC5\LA1.c</v>
+<v>Generated_Source\PSoC5\LA1.h</v>
+<v>Generated_Source\PSoC5\LB1_aliases.h</v>
+<v>Generated_Source\PSoC5\LB1.c</v>
+<v>Generated_Source\PSoC5\LB1.h</v>
+<v>Generated_Source\PSoC5\LC1_aliases.h</v>
+<v>Generated_Source\PSoC5\LC1.c</v>
+<v>Generated_Source\PSoC5\LC1.h</v>
+<v>Generated_Source\PSoC5\HALL_A1_aliases.h</v>
+<v>Generated_Source\PSoC5\HALL_A1.c</v>
+<v>Generated_Source\PSoC5\HALL_A1.h</v>
+<v>Generated_Source\PSoC5\HALL_B1_aliases.h</v>
+<v>Generated_Source\PSoC5\HALL_B1.c</v>
+<v>Generated_Source\PSoC5\HALL_B1.h</v>
+<v>Generated_Source\PSoC5\HALL_C1_aliases.h</v>
+<v>Generated_Source\PSoC5\HALL_C1.c</v>
+<v>Generated_Source\PSoC5\HALL_C1.h</v>
+<v>Generated_Source\PSoC5\REVERSE1_aliases.h</v>
+<v>Generated_Source\PSoC5\REVERSE1.c</v>
+<v>Generated_Source\PSoC5\REVERSE1.h</v>
+<v>Generated_Source\PSoC5\PWM1_aliases.h</v>
+<v>Generated_Source\PSoC5\PWM1.c</v>
+<v>Generated_Source\PSoC5\PWM1.h</v>
+<v>Generated_Source\PSoC5\HA2_aliases.h</v>
+<v>Generated_Source\PSoC5\HA2.c</v>
+<v>Generated_Source\PSoC5\HA2.h</v>
+<v>Generated_Source\PSoC5\HB2_aliases.h</v>
+<v>Generated_Source\PSoC5\HB2.c</v>
+<v>Generated_Source\PSoC5\HB2.h</v>
+<v>Generated_Source\PSoC5\HC2_aliases.h</v>
+<v>Generated_Source\PSoC5\HC2.c</v>
+<v>Generated_Source\PSoC5\HC2.h</v>
+<v>Generated_Source\PSoC5\LA2_aliases.h</v>
+<v>Generated_Source\PSoC5\LA2.c</v>
+<v>Generated_Source\PSoC5\LA2.h</v>
+<v>Generated_Source\PSoC5\LB2_aliases.h</v>
+<v>Generated_Source\PSoC5\LB2.c</v>
+<v>Generated_Source\PSoC5\LB2.h</v>
+<v>Generated_Source\PSoC5\LC2_aliases.h</v>
+<v>Generated_Source\PSoC5\LC2.c</v>
+<v>Generated_Source\PSoC5\LC2.h</v>
+<v>Generated_Source\PSoC5\HALL_A2_aliases.h</v>
+<v>Generated_Source\PSoC5\HALL_A2.c</v>
+<v>Generated_Source\PSoC5\HALL_A2.h</v>
+<v>Generated_Source\PSoC5\HALL_B2_aliases.h</v>
+<v>Generated_Source\PSoC5\HALL_B2.c</v>
+<v>Generated_Source\PSoC5\HALL_B2.h</v>
+<v>Generated_Source\PSoC5\HALL_C2_aliases.h</v>
+<v>Generated_Source\PSoC5\HALL_C2.c</v>
+<v>Generated_Source\PSoC5\HALL_C2.h</v>
+<v>Generated_Source\PSoC5\REVERSE2_aliases.h</v>
+<v>Generated_Source\PSoC5\REVERSE2.c</v>
+<v>Generated_Source\PSoC5\REVERSE2.h</v>
+<v>Generated_Source\PSoC5\PWM2_aliases.h</v>
+<v>Generated_Source\PSoC5\PWM2.c</v>
+<v>Generated_Source\PSoC5\PWM2.h</v>
+</gen_list>
+<warp_dep>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\ieee\work\stdlogic.vif</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif</v>
+<v>C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
+</warp_dep>
+<deps_time v="132191411714525340" />
+<top_block v="TopDesign" />
+<last_generation v="0" />
+<pdl_path v="" />
+<sw_packages />
+</CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>

@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f9af3d6d-b783-467e-b116-10bb4acb20b7
+C:\Users\Fischer\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|0cc013c9-2159-4076-8c70-609463154520
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9505b339-b817-40c4-a517-c488dc44e59b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|5b9fa514-963b-4b64-8d12-b4ffe75fc8ab
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|c94e2fa6-1a27-4286-8d04-242ad1d5289c
+C:\Users\Fischer\Documents\GitHub\kanzi\PSoC\DirectHardware\DirectHardware.cydsn\DirectHardware.cyprj|bcb537b6-0d64-47bb-a9d8-2cc6918eae33
