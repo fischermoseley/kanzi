@@ -6936,6 +6936,76 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <text x="5.588" y="2.413" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
 <text x="5.334" y="1.524" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
 </package>
+<package name="PAD.02X.02">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.02" Square&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.02" x 0.02"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="0.508" dy="0.508" layer="1"/>
+</package>
+<package name="PAD.03X.03">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="PAD.03X.05">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.05" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.05" x 0.05"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="PAD.03X.04">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.04" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.04" x 0.04"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="TP_15TH">
+<description>&lt;h3&gt;Electrically Conductive Via 0.015" Drill&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area:0.015"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
+<circle x="0" y="0" radius="0.381" width="0" layer="30"/>
+</package>
+<package name="1X01_NO_SILK">
+<description>&lt;h3&gt;Plated Through Hole - No Silk Outline&lt;/h3&gt;
+&lt;p&gt;Specifications:
+&lt;ul&gt;&lt;li&gt;Pin count:1&lt;/li&gt;
+&lt;li&gt;Pin pitch:0.1"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;CONN_01&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<pad name="1" x="0" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
+<text x="-1.27" y="1.143" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
+<text x="-1.27" y="-1.778" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CONN_05">
@@ -6956,6 +7026,13 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <pin name="3" x="7.62" y="0" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="4" x="7.62" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="5" x="7.62" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+<symbol name="TEST-POINT">
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0.762" x2="3.302" y2="-0.762" width="0.1524" layer="94" curve="180"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" font="vector">&gt;Name</text>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" font="vector">&gt;Value</text>
+<pin name="1" x="0" y="0" visible="off" length="point" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -7135,6 +7212,68 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 </device>
 </devices>
 </deviceset>
+<deviceset name="TEST-POINT" prefix="TP">
+<description>&lt;h3&gt;SparkFun Test Points&lt;/h3&gt;
+&lt;p&gt;Bare copper test points for troubleshooting or In-Circuit-Testing. These are used by our Production team for verifying production board runs using pogo-pins on test beds.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;SparkFun Products:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13284”&gt;SparkFun LSM9DS1 Breakout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13714”&gt;SparkFun PSOC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13879"&gt;SparkFun Load Cell Amplifier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="TEST-POINT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="2" package="PAD.02X.02">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3" package="PAD.03X.03">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3X5" package="PAD.03X.05">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3X4" package="PAD.03X.04">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TP_15TH_THRU" package="TP_15TH">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="POGO_PTH" package="1X01_NO_SILK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -7195,6 +7334,14 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <part name="R14" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="SUPPLY11" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
 <part name="SUPPLY12" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
+<part name="TP1" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
+<part name="TP2" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
+<part name="TP3" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
+<part name="TP4" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
+<part name="TP5" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
+<part name="TP6" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
+<part name="TP7" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
+<part name="TP8" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3"/>
 </parts>
 <sheets>
 <sheet>
@@ -7378,6 +7525,30 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <instance part="SUPPLY12" gate="G$1" x="-78.74" y="144.78" smashed="yes" rot="R180">
 <attribute name="VALUE" x="-76.073" y="147.955" size="1.778" layer="96" rot="R180"/>
 </instance>
+<instance part="TP1" gate="G$1" x="81.28" y="99.06" smashed="yes" rot="R90">
+<attribute name="NAME" x="79.502" y="102.616" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP2" gate="G$1" x="81.28" y="76.2" smashed="yes" rot="R90">
+<attribute name="NAME" x="79.502" y="79.756" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP3" gate="G$1" x="81.28" y="60.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="79.502" y="64.516" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP4" gate="G$1" x="127" y="99.06" smashed="yes" rot="R90">
+<attribute name="NAME" x="125.222" y="102.616" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP5" gate="G$1" x="127" y="76.2" smashed="yes" rot="R90">
+<attribute name="NAME" x="125.222" y="79.756" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP6" gate="G$1" x="127" y="60.96" smashed="yes" rot="R90">
+<attribute name="NAME" x="125.222" y="64.516" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP7" gate="G$1" x="172.72" y="99.06" smashed="yes" rot="R90">
+<attribute name="NAME" x="170.942" y="102.616" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="TP8" gate="G$1" x="172.72" y="76.2" smashed="yes" rot="R90">
+<attribute name="NAME" x="170.942" y="79.756" size="1.778" layer="95" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7504,6 +7675,8 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="81.28" y1="99.06" x2="78.74" y2="99.06" width="0.1524" layer="91"/>
 <label x="78.74" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP1" gate="G$1" pin="1"/>
+<junction x="81.28" y="99.06"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GH_A"/>
@@ -7516,6 +7689,8 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <pinref part="R2" gate="G$1" pin="1"/>
 <wire x1="81.28" y1="76.2" x2="78.74" y2="76.2" width="0.1524" layer="91"/>
 <label x="78.74" y="76.2" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP2" gate="G$1" pin="1"/>
+<junction x="81.28" y="76.2"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GL_A"/>
@@ -7528,6 +7703,8 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="127" y1="99.06" x2="124.46" y2="99.06" width="0.1524" layer="91"/>
 <label x="124.46" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP4" gate="G$1" pin="1"/>
+<junction x="127" y="99.06"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GH_B"/>
@@ -7540,6 +7717,8 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="127" y1="76.2" x2="124.46" y2="76.2" width="0.1524" layer="91"/>
 <label x="124.46" y="76.2" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP5" gate="G$1" pin="1"/>
+<junction x="127" y="76.2"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GL_B"/>
@@ -7552,6 +7731,8 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="99.06" x2="170.18" y2="99.06" width="0.1524" layer="91"/>
 <label x="170.18" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP7" gate="G$1" pin="1"/>
+<junction x="172.72" y="99.06"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GH_C"/>
@@ -7564,6 +7745,8 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="76.2" x2="170.18" y2="76.2" width="0.1524" layer="91"/>
 <label x="170.18" y="76.2" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP8" gate="G$1" pin="1"/>
+<junction x="172.72" y="76.2"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GL_C"/>
@@ -7587,12 +7770,15 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <wire x1="86.36" y1="58.42" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="60.96" x2="96.52" y2="60.96" width="0.1524" layer="91"/>
 <junction x="96.52" y="60.96"/>
-<wire x1="86.36" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="60.96" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
 <junction x="86.36" y="60.96"/>
 <label x="78.74" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="81.28" y1="60.96" x2="78.74" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="68.58" x2="78.74" y2="68.58" width="0.1524" layer="91"/>
 <junction x="96.52" y="68.58"/>
 <label x="78.74" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP3" gate="G$1" pin="1"/>
+<junction x="81.28" y="60.96"/>
 </segment>
 </net>
 <net name="SL_B" class="0">
@@ -7611,12 +7797,15 @@ Holes are offset 0.005" from center, locking pins in place during soldering.
 <wire x1="132.08" y1="58.42" x2="132.08" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="60.96" x2="142.24" y2="60.96" width="0.1524" layer="91"/>
 <junction x="142.24" y="60.96"/>
-<wire x1="132.08" y1="60.96" x2="124.46" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="60.96" x2="127" y2="60.96" width="0.1524" layer="91"/>
 <junction x="132.08" y="60.96"/>
 <label x="124.46" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="127" y1="60.96" x2="124.46" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="68.58" x2="124.46" y2="68.58" width="0.1524" layer="91"/>
 <junction x="142.24" y="68.58"/>
 <label x="124.46" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="TP6" gate="G$1" pin="1"/>
+<junction x="127" y="60.96"/>
 </segment>
 </net>
 <net name="SL_C" class="0">
