@@ -28,9 +28,11 @@ cool with it!
 #define REVERSE 1 //the logic level on the direction pin that makes the motor go backwards
 
 /*--------------- State Variables -----------------*/
-struct eulerAngle{ double yaw; double pitch; double roll; };
+struct eulerAngle{ double yaw = 0; double pitch = 0; double roll = 0; };
 eulerAngle rotationVector;
 eulerAngle gyroRate;
+double pitchOffset = 7.51;
+
 
 struct stateVector { double left_motor; double right_motor; };
 stateVector controlVector;
@@ -49,6 +51,7 @@ struct Motor {
   uint8_t DIR_PIN = 0;
 
   //state variables
+  int16_t current_pwm = 0;
   uint8_t lastHallState = 0;
   unsigned long lastHallChange = millis(); //timestamp (in MCU time) of the last time that the hall effect sensor's state changed
 
@@ -123,10 +126,30 @@ struct Motor {
     //if the new PWM command is outside the allowable range, don't do anything and return with error
     if(pwm > MAX_MOTOR_OUTPUT || pwm < MIN_MOTOR_OUTPUT) return 1;
 
+    //we need to pulse the direction pins when we start up
+    if(current_pwm == 0 && pwm != 0) {
+      //twiddle direction pins
+      digitalWrite(DIR_PIN, FORWARD);
+      delay(5);
+      digitalWrite(DIR_PIN, REVERSE);
+      delay(5);
+    }
+
+    //pulse the direction pins when we change directions, but make sure to run through zero speed first
+    if( (current_pwm < 0 && pwm > 0) || (current_pwm > 0 && pwm < 0) ){
+      //twiddle direction pins
+      analogWrite(PWM_PIN, 0);
+      digitalWrite(DIR_PIN, FORWARD);
+      delay(5);
+      digitalWrite(DIR_PIN, REVERSE);
+      delay(5);
+    }
+
     if(pwm < 0) digitalWrite(DIR_PIN, REVERSE);
     if(pwm > 0) digitalWrite(DIR_PIN, FORWARD);
 
     analogWrite(PWM_PIN, abs(pwm));
+    current_pwm = pwm;
     return 0;
   }
 };
@@ -157,14 +180,14 @@ struct PIDconfigContainer {
   double yawSetpoint = 0;
   double pitchSetpoint = 0;
   double rollSetpoint = 90;
-  double K_p = 8;
-  double K_i = 1.5;
+  double K_p = 15;
+  double K_i = 2;
   double K_d = 0.3;
 } PIDconfig;
 
 //Specify links and initial tuning parameters
-PID leftPID(&rotationVector.pitch, &controlVector.left_motor, &PIDconfig.pitchSetpoint, PIDconfig.K_p, PIDconfig.K_i, PIDconfig.K_d, DIRECT);
-PID rightPID(&rotationVector.pitch, &controlVector.right_motor, &PIDconfig.pitchSetpoint, PIDconfig.K_p, PIDconfig.K_i, PIDconfig.K_d, DIRECT);
+PID leftPID(&rotationVector.pitch, &controlVector.left_motor, &PIDconfig.pitchSetpoint, PIDconfig.K_p, PIDconfig.K_i, PIDconfig.K_d, REVERSE);
+PID rightPID(&rotationVector.pitch, &controlVector.right_motor, &PIDconfig.pitchSetpoint, PIDconfig.K_p, PIDconfig.K_i, PIDconfig.K_d, REVERSE);
 
 /*------------- Wrapper Functions ----------- */
 void updateRotationVector(struct eulerAngle* rotationVector){
@@ -181,7 +204,7 @@ void updateRotationVector(struct eulerAngle* rotationVector){
     rotationVector->yaw = degrees(atan2(y, x));
 
     /* PITCH */ 
-    rotationVector->pitch = degrees(asin(-2 * (i * k - j * r)));
+    rotationVector->pitch = degrees(asin(-2 * (i * k - j * r))) - pitchOffset;
 
     /* ROLL */ 
     x = 2 * ((j * k) + (i * r)); 
@@ -215,7 +238,7 @@ void setup() {
   Wire.setClock(400000);
   IMU.begin();
   IMU.enableRotationVector(10); //enable the rotation vector to be updated every 10ms
-
+    
   //configure the motor GPIO
   leftMotor.init(LEFT_HALL_A, LEFT_HALL_B, LEFT_HALL_C, LEFT_MOTOR_PWM, LEFT_MOTOR_DIR);
   rightMotor.init(RIGHT_HALL_A, RIGHT_HALL_B, RIGHT_HALL_C, RIGHT_MOTOR_PWM, RIGHT_MOTOR_DIR);
@@ -234,6 +257,8 @@ void loop() {
   leftMotor.update(controlVector.left_motor);
   rightMotor.update(controlVector.right_motor);
   Serial.print("pitch: ");
-  Serial.println(rotationVector.pitch);
+  Serial.print(rotationVector.pitch);
+  Serial.print("    pitchOffset: ");
+  Serial.println(pitchOffset);
   printStateVector(&controlVector);
 }
